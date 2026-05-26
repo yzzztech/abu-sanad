@@ -15,53 +15,30 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Floating Particles ── */
+/* ── Floating Particles Canvas ── */
 .particles {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
 }
-.particles span {
-  position: absolute;
-  width: 4px; height: 4px;
-  background: #00d4ff;
-  border-radius: 50%;
-  animation: float 15s infinite;
-  opacity: 0.6;
-}
-@keyframes float {
-  0% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.4; }
-  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-}
-.particles span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 12s; }
-.particles span:nth-child(2) { left: 15%; animation-delay: 2s; animation-duration: 16s; }
-.particles span:nth-child(3) { left: 25%; animation-delay: 4s; animation-duration: 14s; }
-.particles span:nth-child(4) { left: 35%; animation-delay: 1s; animation-duration: 18s; }
-.particles span:nth-child(5) { left: 45%; animation-delay: 5s; animation-duration: 11s; }
-.particles span:nth-child(6) { left: 55%; animation-delay: 3s; animation-duration: 20s; }
-.particles span:nth-child(7) { left: 65%; animation-delay: 6s; animation-duration: 13s; }
-.particles span:nth-child(8) { left: 75%; animation-delay: 2.5s; animation-duration: 17s; }
-.particles span:nth-child(9) { left: 85%; animation-delay: 4.5s; animation-duration: 15s; }
-.particles span:nth-child(10){ left: 92%; animation-delay: 1.5s; animation-duration: 19s; }
 
 /* ── Nav ── */
 nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(10,10,30,0.85);
+  background: rgba(10,10,30,0.92);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 16px 32px;
-  display: flex; gap: 32px; flex-wrap: wrap;
+  display: flex; gap: 24px; flex-wrap: wrap;
   justify-content: center;
 }
 nav a {
   color: #8888a0; text-decoration: none; font-size: 15px;
-  transition: color 0.3s;
+  transition: color 0.2s; padding: 6px 12px; border-radius: 8px;
 }
-nav a:hover { color: #00d4ff; }
+nav a:hover { color: #00d4ff; background: rgba(0,212,255,0.06); }
 
 /* ── Hero ── */
 .hero {
@@ -126,6 +103,7 @@ section h2 {
 .card {
   background: rgba(18,17,59,0.5);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px; padding: 32px;
   cursor: pointer;
@@ -148,6 +126,7 @@ section h2 {
 .features li {
   background: rgba(18,17,59,0.4);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 16px; padding: 20px 24px;
   margin-bottom: 12px;
@@ -173,6 +152,8 @@ section h2 {
 }
 .price-card {
   background: rgba(18,17,59,0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px; padding: 28px 20px;
 }
@@ -197,6 +178,8 @@ section h2 {
 .timeline-item {
   text-align: center;
   background: rgba(18,17,59,0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 20px; padding: 24px; max-width: 280px;
 }
@@ -217,22 +200,35 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  nav { gap: 16px; padding: 12px 16px; }
-  nav a { font-size: 13px; }
+  nav { gap: 12px; padding: 12px 16px; }
+  nav a { font-size: 13px; padding: 4px 10px; }
   .hero { padding: 60px 16px 50px; }
+  .hero h1 { font-size: 40px; }
+  .hero p { font-size: 17px; }
+  section { padding: 40px 16px; }
+  section h2 { font-size: 26px; }
   .cards { grid-template-columns: 1fr; }
   .price-grid { grid-template-columns: 1fr 1fr; }
+  .features li { padding: 16px; }
+}
+
+@media (max-width: 400px) {
+  .hero { padding: 40px 12px 30px; }
+  .hero h1 { font-size: 32px; }
+  .hero .truck-icon { font-size: 56px; }
+  .price-grid { grid-template-columns: 1fr; }
+  .timeline { flex-direction: column; align-items: center; }
+  .timeline-item { max-width: 100%; }
+  nav a { font-size: 12px; gap: 8px; }
 }
 </style>
 </head>
 <body>
 
-<!-- Particles -->
-<div class="particles">
-  <span></span><span></span><span></span><span></span><span></span>
-  <span></span><span></span><span></span><span></span>
-</div>
+<!-- Particles Canvas -->
+<canvas class="particles" id="particles"></canvas>
 
 <!-- Nav -->
 <nav>
@@ -425,6 +421,40 @@ footer {
 <footer>
   Hermes Agent · مفتوح المصدر · مخصص لأخو الدكتور محمد · ٢٠٢٦
 </footer>
+
+<script>
+// Canvas particles — smoother & more responsive
+const c = document.getElementById('particles'), x = c.getContext('2d');
+function resize() { c.width = window.innerWidth; c.height = window.innerHeight; }
+resize();
+const p = Array.from({length: 50}, () => ({
+  x: Math.random() * c.width, y: Math.random() * c.height,
+  r: Math.random() * 1.5 + 0.3, a: Math.random() * Math.PI * 2,
+  s: Math.random() * 0.3 + 0.1, o: Math.random() * 0.3 + 0.1
+}));
+function A() {
+  x.clearRect(0, 0, c.width, c.height);
+  p.forEach(pt => {
+    pt.a += pt.s * 0.01; pt.y -= pt.s * 0.3;
+    if (pt.y < -10) pt.y = c.height + 10;
+    const op = pt.o + Math.sin(pt.a) * 0.15;
+    x.beginPath(); x.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+    x.fillStyle = `rgba(0,212,255,${op})`; x.fill();
+  });
+  requestAnimationFrame(A);
+}
+A();
+window.addEventListener('resize', resize);
+
+// Smooth scroll — works everywhere
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    t && t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
 
 </body>
 </html>
