@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Floating Particles Canvas ── */
 .particles {
   position: fixed;
   inset: 0;
@@ -23,7 +22,6 @@ body {
   z-index: 0;
 }
 
-/* ── Nav ── */
 nav {
   position: sticky; top: 0; z-index: 100;
   background: rgba(10,10,30,0.92);
@@ -40,7 +38,6 @@ nav a {
 }
 nav a:hover { color: #00d4ff; background: rgba(0,212,255,0.06); }
 
-/* ── Hero ── */
 .hero {
   position: relative; z-index: 1;
   text-align: center; padding: 100px 24px 80px;
@@ -79,7 +76,6 @@ nav a:hover { color: #00d4ff; background: rgba(0,212,255,0.06); }
   box-shadow: 0 0 40px rgba(0,212,255,0.3);
 }
 
-/* ── Section ── */
 section {
   position: relative; z-index: 1;
   max-width: 1100px; margin: 0 auto;
@@ -94,7 +90,6 @@ section h2 {
   display: inline-block;
 }
 
-/* ── Cards Grid ── */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,7 +116,6 @@ section h2 {
 .card .detail.open { max-height: 300px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
 .card .detail p { color: #aaa; font-size: 14px; line-height: 1.9; }
 
-/* ── Feature List ── */
 .features { list-style: none; padding: 0; }
 .features li {
   background: rgba(18,17,59,0.4);
@@ -143,7 +137,6 @@ section h2 {
   flex-shrink: 0;
 }
 
-/* ── Price Cards ── */
 .price-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -170,7 +163,6 @@ section h2 {
 }
 .price-card .label { color: #8888a0; margin-top: 8px; font-size: 14px; }
 
-/* ── Timeline ── */
 .timeline {
   display: flex; flex-wrap: wrap; gap: 32px;
   justify-content: center;
@@ -193,14 +185,12 @@ section h2 {
 .timeline-item h4 { margin-bottom: 8px; color: #fff; }
 .timeline-item p { color: #8888a0; font-size: 14px; }
 
-/* ── Footer ── */
 footer {
   text-align: center; padding: 40px 24px;
   color: #555; font-size: 13px;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   nav { gap: 12px; padding: 12px 16px; }
   nav a { font-size: 13px; padding: 4px 10px; }
@@ -227,10 +217,8 @@ footer {
 </head>
 <body>
 
-<!-- Particles Canvas -->
 <canvas class="particles" id="particles"></canvas>
 
-<!-- Nav -->
 <nav>
   <a href="#hero">الرئيسية</a>
   <a href="#what">وش بيكون؟</a>
@@ -240,15 +228,13 @@ footer {
   <a href="#plan">الخطة</a>
 </nav>
 
-<!-- Hero -->
 <section class="hero" id="hero">
   <div class="truck-icon">🚚</div>
   <h1>أبو سند</h1>
-  <p>مساعد ذكي لـ Food Truck — بسيط، صبور، يتكلم عامية، ويشتغل على جهازك بدون إنترنت. صفر تكلفة، مئة فايدة.</p>
+  <p>مساعد ذكي لـ Food Truck — بسيط، صبور، يتكلم عامية. تواصل معه من تيليقرام، وبياناتك على جهازك. بدون اشتراكات شهرية.</p>
   <a href="#what" class="cta">كيف يشتغل؟</a>
 </section>
 
-<!-- What -->
 <section id="what">
   <h2>وش بيكون "أبو سند"؟</h2>
   <div class="cards">
@@ -265,21 +251,20 @@ footer {
       <div class="detail"><p>تكتب له سؤالك بالعامية السعودية ويرد عليك بصبر وبساطة. لو ما فهمت، يعيد الشرح. لو احتجت تفصيل أكثر، يفصّل. دايم يشجعك ويحمسك. كأنك تكلم صديق خبير بالمطاعم.</p></div>
     </div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')">
-      <div class="icon">💻</div>
-      <h3>يشتغل على جهازك المحلي</h3>
-      <div class="preview">بدون إنترنت، بدون اشتراكات شهرية — اضغط للتفاصيل</div>
-      <div class="detail"><p>البرنامج يشتغل على كمبيوترك مباشرة. تحتاج إنترنت أول مرة بس عشان التثبيت. بعدها يشتغل محلياً — سريع، آمن، وخصوصيتك محفوظة. محد يطلع على بياناتك.</p></div>
+      <div class="icon">📱</div>
+      <h3>تواصل معه من تيليقرام</h3>
+      <div class="preview">اسأله من جوالك في أي وقت — اضغط للتفاصيل</div>
+      <div class="detail"><p>أبو سند مربوط بتليقرام. تفتح الشات وتكتب سؤالك — يرد عليك فوراً. وأنت في التريلة، في السوق، أو في البيت. ما تحتاج تفتح كمبيوتر ولا برامج. تيليقرام اللي معك كل يوم.</p></div>
     </div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')">
-      <div class="icon">🚀</div>
-      <h3>ضغطة زر ويشتغل</h3>
-      <div class="preview">أيقونة على سطح المكتب — اضغط للتفاصيل</div>
-      <div class="detail"><p>ما يحتاج تفتح مواقع ولا تسوي دخول ولا تحفظ باسووردات. أيقونة "أبو سند" على سطح المكتب — تضغطها وتبدأ تكتب سؤالك على طول. زي ما تفتح أي برنامج ثاني.</p></div>
+      <div class="icon">🔒</div>
+      <h3>بياناتك على جهازك</h3>
+      <div class="preview">خصوصيتك أولاً — اضغط للتفاصيل</div>
+      <div class="detail"><p>البرنامج (Hermes Agent) يشتغل على جهازك الشخصي. كل بياناتك — مبيعات، قوائم، مشتريات — محفوظة عندك. الموديل الذكي يحتاج إنترنت عشان يشتغل (DeepSeek API)، لكن محد يخزّن بياناتك ولا يشاركها.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Skills -->
 <section id="skills">
   <h2>المهارات — وش بيساعدك فيه؟</h2>
   <div class="cards">
@@ -334,7 +319,6 @@ footer {
   </div>
 </section>
 
-<!-- Features -->
 <section id="features">
   <h2>ليش "أبو سند" مختلف؟</h2>
   <ul class="features">
@@ -344,15 +328,15 @@ footer {
     </li>
     <li>
       <span class="check">✓</span>
-      <div><strong>بدون اشتراك، مجاني للأبد</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر ومجاني. الموديل اللي يشتغل عليه مجاني بعد. ما تدفع ريال.</span></div>
+      <div><strong>بدون اشتراك، مجاني للأبد</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر ومجاني. الموديل اللي يشتغل عليه (DeepSeek) مجاني بعد. ما تدفع ريال.</span></div>
     </li>
     <li>
       <span class="check">✓</span>
-      <div><strong>يشتغل حتى بدون إنترنت</strong><br><span style="color:#8888a0">بعد التثبيت الأول، يشتغل على جهازك محلياً. سريع وما يحتاج نت.</span></div>
+      <div><strong>تواصل معه من تيليقرام</strong><br><span style="color:#8888a0">اسأله من جوالك في أي وقت ومن أي مكان. تيليقرام اللي معك دايم.</span></div>
     </li>
     <li>
       <span class="check">✓</span>
-      <div><strong>خصوصيتك مضمونة</strong><br><span style="color:#8888a0">كل شي على جهازك. محد يشوف بياناتك ولا أسرار شغلك.</span></div>
+      <div><strong>خصوصيتك مضمونة</strong><br><span style="color:#8888a0">بياناتك على جهازك. محد يشوف أسرار شغلك ولا يشاركها. الموديل يشتغل عبر API بس — ما يخزّن شي.</span></div>
     </li>
     <li>
       <span class="check">✓</span>
@@ -361,7 +345,6 @@ footer {
   </ul>
 </section>
 
-<!-- Cost -->
 <section id="cost">
   <h2>التكلفة = صفر</h2>
   <div class="price-grid">
@@ -371,7 +354,7 @@ footer {
     </div>
     <div class="price-card">
       <div class="amount" style="background:linear-gradient(135deg,#00d4ff,#006699);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$0</div>
-      <div class="label">الموديل الذكي<br>DeepSeek Flash</div>
+      <div class="label">الموديل الذكي<br>DeepSeek API</div>
     </div>
     <div class="price-card">
       <div class="amount" style="background:linear-gradient(135deg,#00d4ff,#006699);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$0</div>
@@ -387,19 +370,18 @@ footer {
   </p>
 </section>
 
-<!-- Plan -->
 <section id="plan">
   <h2>خطة التنفيذ</h2>
   <div class="timeline">
     <div class="timeline-item">
       <div class="step">1</div>
       <h4>جلسة تثبيت</h4>
-      <p>ساعة وحدة على جهازه. نثبت البرنامج، نضبط شخصية "أبو سند"، نخليه يجرّب بنفسه، نجاوب على أسئلته.</p>
+      <p>ساعة وحدة على جهازه. نثبت البرنامج، نضبط شخصية "أبو سند"، نربطه بتليقرام، نخليه يجرّب بنفسه.</p>
     </div>
     <div class="timeline-item">
       <div class="step">2</div>
       <h4>فترة تجربة</h4>
-      <p>أسبوع يستخدمه في شغله اليومي. نجمع ملاحظاته ونسأله: وش ناقص؟ وش يحتاج يتعدل؟</p>
+      <p>أسبوع يستخدمه من تيليقرام في شغله اليومي. نجمع ملاحظاته ونسأله: وش ناقص؟ وش يحتاج يتعدل؟</p>
     </div>
     <div class="timeline-item">
       <div class="step">3</div>
@@ -409,11 +391,10 @@ footer {
   </div>
 </section>
 
-<!-- CTA -->
 <section style="text-align:center;padding-bottom:100px">
   <h2>جاهز تبدأ؟</h2>
   <p style="color:#8888a0;max-width:500px;margin:0 auto 32px;font-size:17px">
-    كل شي جاهز. بس نتفق على وقت يناسبكم ونضبط له "أبو سند" في ساعة وحدة.
+    كل شي جاهز. نضبط له "أبو سند" على تيليقرام في ساعة وحدة.
   </p>
   <a href="#hero" class="cta">🚚 خلنا نبدأ!</a>
 </section>
@@ -423,7 +404,6 @@ footer {
 </footer>
 
 <script>
-// Canvas particles — smoother & more responsive
 const c = document.getElementById('particles'), x = c.getContext('2d');
 function resize() { c.width = window.innerWidth; c.height = window.innerHeight; }
 resize();
@@ -446,7 +426,6 @@ function A() {
 A();
 window.addEventListener('resize', resize);
 
-// Smooth scroll — works everywhere
 document.querySelectorAll('nav a').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
