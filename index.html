@@ -33,7 +33,7 @@ section p, section li { color: #b0b0c0; }
 .card .preview { color: #8888a0; font-size: 14px; }
 .card .detail { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
 .card .detail.open { max-height: 500px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
-.card .detail p, .card .detail li { color: #aaa; font-size: 14px; line-height: 1.9; }
+.card .detail p { color: #aaa; font-size: 14px; line-height: 1.9; }
 .features { list-style: none; padding: 0; }
 .features li { background: rgba(18,17,59,0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; display: flex; align-items: center; gap: 16px; transition: all 0.3s; }
 .features li:hover { border-color: rgba(0,212,255,0.15); transform: translateX(-4px); }
@@ -79,7 +79,6 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .ecosystem-badge { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,136,204,0.08)); border: 1px solid rgba(0,212,255,0.15); border-radius: 12px; padding: 16px 20px; flex: 1; min-width: 200px; }
 .ecosystem-badge .e-label { color: #00d4ff; font-size: 13px; margin-bottom: 6px; }
 .ecosystem-badge .e-name { color: #fff; font-size: 16px; font-weight: bold; }
-.divider { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,212,255,0.15), transparent); margin: 40px 0; }
 .summary-banner { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
 .summary-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
 .summary-banner strong { color: #00d4ff; }
@@ -144,9 +143,9 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
     <tbody>
       <tr><td><strong>نايلة للتمويل</strong></td><td>قروض صغيرة</td><td>للبزنسات ≤ ٣ مليون سنوياً. ⭐ <span class="highlight">الأنسب لعربة طعام</span></td></tr>
       <tr><td><strong>ريادة</strong></td><td>قروض + تدريب</td><td>لحد ٣٠٠ ألف. تمر ببرنامج تدريبي</td></tr>
-      <tr><td><strong>كفالة</strong></td><td>ضمانات</td><td>تضمن قرضك عند البنوك. تحتاج أوراق مدققة</td></tr>
+      <tr><td><strong>كفالة</strong></td><td>ضمانات</td><td>تضمن قرضك عند البنوك</td></tr>
       <tr><td><strong>واعد (أرامكو)</strong></td><td>قروض مباشرة</td><td>شروط عادلة لرواد الأعمال الجادين</td></tr>
-      <tr><td><strong>بنك التنمية الاجتماعية</strong></td><td>قروض حكومية</td><td>العمود الفقري. كل المبادرات ترجع له</td></tr>
+      <tr><td><strong>بنك التنمية الاجتماعية</strong></td><td>قروض حكومية</td><td>العمود الفقري للتمويل</td></tr>
       <tr><td><strong>Community Jameel</strong></td><td>قروض + استشارات</td><td>لحد ٣٠٠ ألف مع ورش عمل</td></tr>
     </tbody>
   </table>
@@ -154,11 +153,11 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 
 <section id="mazaya">
   <h2>🎫 منصة "مزايا" — تحت منشآت</h2>
-  <p style="color:#8888a0;margin-bottom:20px"><strong>خصومات وامتيازات حصرية</strong> للمنشآت الصغيرة والمتوسطة من شركات القطاع الخاص. تسجّل في منشآت ← تدخل مزايا ← تحصل على عروض حصرية.</p>
+  <p style="color:#8888a0;margin-bottom:20px"><strong>خصومات وامتيازات حصرية</strong> للمنشآت الصغيرة والمتوسطة. تسجّل في منشآت ← تدخل مزايا ← تحصل على عروض حصرية.</p>
   <div class="mazaya-grid">
     <div class="mazaya-item"><div class="m-icon">🏦</div><h4>بنوك وخدمات مالية</h4><ul><li>حسابات تجارية بدون رسوم</li><li>خصم على أجهزة POS</li><li>تسهيلات ائتمانية</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">💳</div><h4>مدفوعات وتقنية مالية</h4><ul><li>خصم على بوابات الدفع</li><li>رسوم مخفّضة على mada / STC Pay</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي</h4><ul><li>تأمين صحي للعمالة</li><li>أسعار مخفّضة للمجموعات</li><li>خطط تغطية متعددة</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي — للعمالة</h4><ul><li>تأمين صحي للعمالة</li><li>أسعار مخفّضة للمجموعات</li><li>خطط تغطية متعددة</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🛡️</div><h4>تأمين تجاري</h4><ul><li>تأمين المركبات التجارية</li><li>تأمين المسؤولية العامة</li><li>تأمين الممتلكات والمعدات</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">📡</div><h4>اتصالات وتقنية</h4><ul><li>خصم على باقات الإنترنت</li><li>عروض جوالات الأعمال</li><li>خدمات سحابية مخفضة</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">📣</div><h4>خدمات تسويقية</h4><ul><li>أرصدة إعلانية مجانية</li><li>خصم على منصات التسويق</li><li>تصميم هوية وشعار</li><li>تصوير احترافي</li></ul></div>
@@ -169,35 +168,52 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
     <div class="mazaya-item"><div class="m-icon">📋</div><h4>خدمات حكومية</h4><ul><li>تسهيل إجراءات السجل التجاري</li><li>تسريع التراخيص البلدية</li><li>أولوية في المشتريات الحكومية</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🔐</div><h4>أمن سيبراني وتقنية</h4><ul><li>حماية بيانات العملاء</li><li>امتثال PDPL</li><li>استشارات أمن معلومات</li></ul></div>
   </div>
-  <div class="summary-banner">
-    <p><strong>🎫 كيف تستفيد من مزايا:</strong><br>١. سجّل في <strong>منشآت</strong> (إذا مو مسجل) ← ٢. ادخل <strong>مزايا</strong> من البوابة ← ٣. اختر الخدمة ← ٤. احصل على كود الخصم<br><strong>التوفير المتوقع:</strong> ٢٠-٥٠٪ على أغلب الخدمات. عبد الرحمن، هذي فلوس ترجع لك.</p>
-  </div>
+  <div class="summary-banner"><p><strong>🎫 كيف تستفيد:</strong> ١. سجّل في <strong>منشآت</strong> ← ٢. ادخل <strong>مزايا</strong> ← ٣. اختر الخدمة ← ٤. احصل على كود الخصم<br><strong>التوفير:</strong> ٢٠-٥٠٪ على أغلب الخدمات. عبد الرحمن، هذي فلوس ترجع لك.</p></div>
 </section>
 
 <section id="tools">
   <h2>🧰 حقيبة الأدوات</h2>
+
   <div class="tool-cat">
-    <h4><span class="ico">💳</span> نقطة البيع POS — FoodX</h4>
+    <h4><span class="ico">💳</span> نقطة البيع POS — Foodics</h4>
     <table><thead><tr><th>العنصر</th><th>التفاصيل</th></tr></thead><tbody>
-      <tr><td>البرنامج</td><td><strong>FoodX</strong> — نظام كاشير متكامل</td></tr>
+      <tr><td>النظام</td><td><strong><a href="https://www.foodics.com/" target="_blank" style="color:#00d4ff">Foodics</a></strong> — نظام كاشير سحابي رائد في الشرق الأوسط</td></tr>
       <tr><td>الجهاز</td><td><strong>Intersoft</strong> أو <strong>New Leap</strong>. عندنا علاقة مباشرة مع Intersoft</td></tr>
-      <tr><td>المحاسبة</td><td>FoodX يغطي المحاسبة و<span class="highlight">رفع الفواتير إلى ZATCA Phase 2</span></td></tr>
+      <tr><td>المحاسبة</td><td>Foodics يدعم المحاسبة و<span class="highlight">رفع الفواتير إلى ZATCA Phase 2</span></td></tr>
       <tr><td>المدفوعات</td><td>يدعم mada و STC Pay و Apple Pay</td></tr>
-      <tr><td>Wotir</td><td>خدمة <span class="note">مطابقة الإيصالات مع التسويات البنكية</span> — نقدمها لك</td></tr>
+      <tr><td><strong>CRM</strong></td><td>Foodics يدعم <span class="highlight">إدارة علاقات العملاء</span> — قائمة عملاء كاملة، سجل الطلبات، تفاعل مع الزباين</td></tr>
     </tbody></table>
   </div>
+
   <div class="tool-cat">
-    <h4><span class="ico">📦</span> مخزون | <span class="ico">👥</span> CRM | <span class="ico">📱</span> تسويق | <span class="ico">🛵</span> توصيل | <span class="ico">📊</span> تحليل | <span class="ico">🗂️</span> إدارة</h4>
-    <table><thead><tr><th>الفئة</th><th>الأداة</th><th>التفاصيل</th></tr></thead><tbody>
-      <tr><td>مخزون</td><td>FoodX Inventory</td><td>مدمج مع POS</td></tr>
-      <tr><td>CRM</td><td>قائمة واتساب</td><td>أبسط وأسرع. مجاني</td></tr>
-      <tr><td>تسويق</td><td>Canva + Meta Business Suite</td><td>قوالب عربية. مجاني/Pro</td></tr>
-      <tr><td>توصيل</td><td>Jahez أو HungerStation</td><td>ابدأ بواحدة</td></tr>
-      <tr><td>تحليل</td><td>FoodX Dashboard + Google Sheets</td><td>مبيعات، أرباح</td></tr>
-      <tr><td>إدارة</td><td>Notion + Google Calendar</td><td>شيك ليست، مواعيد</td></tr>
+    <h4><span class="ico">🧾</span> التسوية والمطابقة — Wateer</h4>
+    <table><thead><tr><th>العنصر</th><th>التفاصيل</th></tr></thead><tbody>
+      <tr><td>النظام</td><td><strong>Wateer</strong> — نظام التسوية والمطابقة البنكية</td></tr>
+      <tr><td>المطابقة</td><td><span class="highlight">مطابقة الإيصالات مع التسويات البنكية</span> تلقائياً</td></tr>
+      <tr><td>الفوترة</td><td>يقدم <span class="note">الفواتير الرقمية بهويتك</span> — فواتير احترافية بعلامتك التجارية</td></tr>
+      <tr><td>التكامل</td><td>يوجد <span class="highlight">ربط مباشر مع Foodics</span> — بيانات الكاشير تنساب تلقائياً</td></tr>
     </tbody></table>
   </div>
-  <div class="summary-banner"><p><strong>🎯 الـ Stack المثالي:</strong> FoodX ← جهاز Intersoft/New Leap ← Wotir للمطابقة ← واتساب CRM ← Canva ← Google Sheets<br><strong>التكلفة الشهرية:</strong> ~٣٥٠-٤٥٠ ريال. Wotir نقدمها لك.</p></div>
+
+  <div class="tool-cat">
+    <h4><span class="ico">📦</span> باقي الأدوات</h4>
+    <table><thead><tr><th>الفئة</th><th>الأداة</th><th>التفاصيل</th></tr></thead><tbody>
+      <tr><td>مخزون</td><td>Foodics Inventory</td><td>مدمج مع POS. ما تحتاج نظامين</td></tr>
+      <tr><td>تسويق</td><td>Canva + Meta Business Suite</td><td>قوالب عربية. مجاني/Pro</td></tr>
+      <tr><td>توصيل</td><td>Jahez أو HungerStation</td><td>ابدأ بواحدة. العمولة ٢٠-٣٠٪</td></tr>
+      <tr><td>تحليل</td><td>Foodics Dashboard + Google Sheets</td><td>مبيعات، أرباح، أكثر الأطباق طلباً</td></tr>
+      <tr><td>إدارة</td><td>Notion + Google Calendar</td><td>شيك ليست، مواعيد، تذكيرات</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="summary-banner">
+    <p>
+      <strong>🎯 الـ Stack المتكامل:</strong><br>
+      Foodics (POS + محاسبة + CRM + زاتكا) ← جهاز Intersoft/New Leap ← Wateer للتسوية والمطابقة والفواتير الرقمية بهويتك ← Canva للتسويق ← Google Sheets للتحليل<br><br>
+      <strong>التكامل:</strong> Foodics ← Wateer ربط مباشر. كل شي ينساب تلقائياً.<br>
+      <strong>التكلفة الشهرية:</strong> ~٣٥٠-٤٥٠ ريال. Wateer نقدمها لك.
+    </p>
+  </div>
 </section>
 
 <section id="books">
@@ -232,7 +248,7 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="regulations">
   <h2>📜 الأنظمة واللوائح</h2>
   <div class="tool-cat"><h4><span class="ico">🏛️</span> التراخيص الأساسية</h4><table><thead><tr><th>المطلب</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>سجل تجاري</strong></td><td>وزارة التجارة</td></tr><tr><td><strong>رخصة بلدية</strong></td><td>أمانة المنطقة — منصة بلدي</td></tr><tr><td><strong>شهادة صحية</strong></td><td>البلدية — لكل عامل</td></tr></tbody></table></div>
-  <div class="tool-cat"><h4><span class="ico">💰</span> أنظمة مالية وضريبية</h4><table><thead><tr><th>النظام</th><th>الجهة</th><th>المطلوب</th></tr></thead><tbody><tr><td><strong>ضريبة القيمة المضافة</strong></td><td>ZATCA</td><td>التسجيل إذا تجاوزت ٣٧٥ ألف</td></tr><tr><td><strong>الفوترة الإلكترونية</strong></td><td>ZATCA Phase 2</td><td><span class="highlight">FoodX يغطيه ✅</span></td></tr></tbody></table></div>
+  <div class="tool-cat"><h4><span class="ico">💰</span> أنظمة مالية وضريبية</h4><table><thead><tr><th>النظام</th><th>الجهة</th><th>المطلوب</th></tr></thead><tbody><tr><td><strong>ضريبة القيمة المضافة</strong></td><td>ZATCA</td><td>التسجيل إذا تجاوزت ٣٧٥ ألف</td></tr><tr><td><strong>الفوترة الإلكترونية</strong></td><td>ZATCA Phase 2</td><td><span class="highlight">Foodics + Wateer يغطونه ✅</span></td></tr></tbody></table></div>
   <div class="tool-cat"><h4><span class="ico">👷</span> أنظمة عمالية</h4><table><thead><tr><th>النظام</th><th>الجهة</th><th>المطلوب</th></tr></thead><tbody><tr><td><strong>نظام العمل</strong></td><td>وزارة الموارد البشرية</td><td>عقود عمل. رواتب. تأمين طبي</td></tr><tr><td><strong>التأمينات الاجتماعية</strong></td><td>GOSI</td><td>تسجيل السعوديين. اشتراكات شهرية</td></tr></tbody></table></div>
 </section>
 
@@ -241,7 +257,7 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <ul class="features">
     <li><span class="check">✓</span><div><strong>مليون بالمئة خاص فيك</strong><br><span style="color:#8888a0">شخصيته، طريقته، ومهاراته كلها مخصصة لشغلك يا عبد الرحمن.</span></div></li>
     <li><span class="check">✓</span><div><strong>بدون اشتراك، مجاني للأبد</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر. الموديل (DeepSeek) مجاني.</span></div></li>
-    <li><span class="check">✓</span><div><strong>فاهم، مركز، وقدها</strong><br><span style="color:#8888a0">دارس ١٢ كتاب. ملم بالمنظومة السعودية ومزايا. صريح وما يجامل. فزّيع وما يقول لا — بس إذا شي غلط بيقولك.</span></div></li>
+    <li><span class="check">✓</span><div><strong>فاهم، مركز، وقدها</strong><br><span style="color:#8888a0">دارس ١٢ كتاب. ملم بالمنظومة السعودية ومزايا. صريح وما يجامل. فزّيع وما يقول لا.</span></div></li>
     <li><span class="check">✓</span><div><strong>تواصل معه من تيليقرام</strong><br><span style="color:#8888a0">اسأله من جوالك في أي وقت ومن أي مكان.</span></div></li>
     <li><span class="check">✓</span><div><strong>خصوصيتك مضمونة</strong><br><span style="color:#8888a0">بياناتك على جهازك. محد يشوف أسرار شغلك.</span></div></li>
   </ul>
@@ -261,9 +277,9 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="plan">
   <h2>خطة التنفيذ مع عبد الرحمن</h2>
   <div class="timeline">
-    <div class="timeline-item"><div class="step">1</div><h4>جلسة تثبيت</h4><p>ساعة وحدة. نثبت البرنامج، نضبط شخصية "أبو سند"، نربطه بتليقرام.</p></div>
-    <div class="timeline-item"><div class="step">2</div><h4>فترة تجربة</h4><p>أسبوع يستخدمه من تيليقرام. نجمع ملاحظاته.</p></div>
-    <div class="timeline-item"><div class="step">3</div><h4>دعم مستمر</h4><p>أي شي جديد يحتاجه — نضيفه. المهارات تتطور مع شغله.</p></div>
+    <div class="timeline-item"><div class="step">1</div><h4>جلسة تثبيت</h4><p>نثبت البرنامج، نضبط "أبو سند"، نربطه بتليقرام.</p></div>
+    <div class="timeline-item"><div class="step">2</div><h4>فترة تجربة</h4><p>أسبوع يستخدمه. نجمع ملاحظاته.</p></div>
+    <div class="timeline-item"><div class="step">3</div><h4>دعم مستمر</h4><p>أي شي جديد — نضيفه. المهارات تتطور معه.</p></div>
   </div>
 </section>
 
