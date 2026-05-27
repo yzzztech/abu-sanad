@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إطار العمل الاستشاري — Hermes Consulting Framework</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a1a; color: #e0e0e0; font-family: Tahoma, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; }
+.container { max-width: 1000px; margin: 0 auto; padding: 60px 24px; }
+h1 { font-size: 40px; background: linear-gradient(135deg, #fff 30%, #00d4ff 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+.subtitle { color: #8888a0; font-size: 16px; margin-bottom: 48px; }
+h2 { font-size: 26px; color: #00d4ff; margin: 48px 0 20px; padding-bottom: 8px; border-bottom: 1px solid rgba(0,212,255,0.12); }
+h3 { color: #ffd700; font-size: 18px; margin: 24px 0 10px; }
+p, li { color: #b0b0c0; font-size: 15px; line-height: 1.9; }
+ul { padding-right: 20px; }
+li { margin-bottom: 4px; }
+.phase { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+.phase-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.phase-num { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #00d4ff, #006699); color: #fff; font-size: 20px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.phase-header h3 { color: #fff; margin: 0; font-size: 20px; }
+table { width: 100%; border-spacing: 0 6px; border-collapse: separate; margin: 20px 0; font-size: 14px; }
+thead th { text-align: right; color: #8888a0; font-size: 13px; font-weight: 500; padding: 0 12px 8px; }
+tbody td { background: rgba(18,17,59,0.35); padding: 12px 14px; color: #c0c0d0; vertical-align: top; }
+tbody tr td:first-child { border-radius: 0 10px 10px 0; font-weight: 600; color: #fff; white-space: nowrap; }
+tbody tr td:last-child { border-radius: 10px 0 0 10px; }
+.summary { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
+.summary p { color: #c0c0d0; }
+.summary strong { color: #00d4ff; }
+.deliverable { color: #4caf50; font-weight: bold; }
+.back-link { display: inline-block; margin-top: 40px; color: #00d4ff; text-decoration: none; font-size: 14px; padding: 10px 20px; border: 1px solid rgba(0,212,255,0.2); border-radius: 10px; }
+.back-link:hover { background: rgba(0,212,255,0.08); }
+footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>إطار العمل الاستشاري</h1>
+<div class="subtitle">Hermes Consulting Framework — منهجية قابلة للتطبيق على أي قطاع وأي عميل</div>
+
+<div class="summary">
+  <p><strong>الغرض:</strong> إطار عمل منهجي لتقديم خدمة استشارية مدعومة بالذكاء الاصطناعي لرواد الأعمال وأصحاب المشاريع. يُنتج: مساعد ذكي مخصص، صفحة تعريفية، منظومة أدوات، خطة تدريبية، ودعم مستمر.</p>
+</div>
+
+<!-- ═══════ PHASE 1 ═══════ -->
+<h2>المرحلة الأولى: الاكتشاف والتحليل</h2>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">١</div><h3>جمع المتطلبات</h3></div>
+  <table>
+    <thead><tr><th>العنصر</th><th>الوصف</th><th>مثال (أبو سند)</th></tr></thead>
+    <tbody>
+      <tr><td>العميل</td><td>الاسم الكامل</td><td>عبد الرحمن سندي</td></tr>
+      <tr><td>القطاع</td><td>مجال العمل</td><td>عربات الطعام المتنقلة</td></tr>
+      <tr><td>نموذج العمل</td><td>B2C / B2B / هجين</td><td>B2C — بيع مباشر</td></tr>
+      <tr><td>الموقع</td><td>المدينة، الدولة</td><td>المملكة العربية السعودية</td></tr>
+      <tr><td>المرحلة</td><td>فكرة / تأسيس / نمو / توسع</td><td>تأسيس</td></tr>
+      <tr><td>الاحتياجات</td><td>أبرز التحديات</td><td>إرشاد، أدوات، تدريب</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٢</div><h3>تحديد اسم وشخصية المساعد</h3></div>
+  <table>
+    <thead><tr><th>العنصر</th><th>الوصف</th><th>مثال</th></tr></thead>
+    <tbody>
+      <tr><td>الاسم</td><td>يفضل أن يكون له علاقة بالعميل أو المجال</td><td>أبو سند (العائلة: سندي)</td></tr>
+      <tr><td>الشخصية</td><td>خبير، صبور، صريح، إلخ</td><td>مخضرم، عامية، صريح</td></tr>
+      <tr><td>أسلوب التواصل</td><td>رسمي / شبه رسمي / عامي</td><td>عامية سعودية</td></tr>
+      <tr><td>قناة التواصل</td><td>تيليقرام / واتساب / ويب</td><td>تيليقرام</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٣</div><h3>بناء قاعدة المعرفة</h3></div>
+  <ul>
+    <li><strong>المراجع:</strong> تحديد ٨-١٢ مرجعاً متخصصاً في مجال العميل</li>
+    <li><strong>المنظومة المحلية:</strong> الجهات الداعمة، التمويلية، التنظيمية</li>
+    <li><strong>منصة المزايا:</strong> الخصومات والامتيازات المتاحة (منشآت أو ما يعادلها)</li>
+    <li><strong>الأنظمة:</strong> التراخيص، الضرائب، أنظمة العمل، الاشتراطات</li>
+  </ul>
+  <p><span class="deliverable">المُخرج:</span> ملف SKILL.md متكامل للمساعد الذكي.</p>
+</div>
+
+<h2>المرحلة الثانية: تجهيز المنظومة</h2>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٤</div><h3>منظومة الأدوات</h3></div>
+  <table>
+    <thead><tr><th>الفئة</th><th>أمثلة</th><th>معايير الاختيار</th></tr></thead>
+    <tbody>
+      <tr><td>نظام التشغيل الرئيسي</td><td>POS، ERP، CRM</td><td>يدعم السوق المحلي، متوافق مع الأنظمة</td></tr>
+      <tr><td>الأجهزة</td><td>نقاط بيع، طرفيات دفع</td><td>شراكة مباشرة مع المزوّد</td></tr>
+      <tr><td>الأنظمة المالية</td><td>تسويات، فوترة، محاسبة</td><td>متوافق مع الزكاة/الضريبة المحلية</td></tr>
+      <tr><td>أدوات مساندة</td><td>تسويق، تحليل، إدارة</td><td>مجانية/منخفضة التكلفة</td></tr>
+    </tbody>
+  </table>
+  <p><span class="deliverable">المُخرج:</span> جدول الأدوات مع التكاليف والتكاملات.</p>
+</div>
+
+<h2>المرحلة الثالثة: بناء الصفحة التعريفية</h2>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٥</div><h3>الصفحة التعريفية (GitHub Pages)</h3></div>
+  <p>صفحة احترافية بـ ١٠ أقسام:</p>
+  <ol style="padding-right:20px;color:#b0b0c0;font-size:14px;line-height:2.2">
+    <li>الغلاف — اسم المساعد، اسم العميل</li>
+    <li>عن المساعد — شخصيته، تواصله، خصوصية البيانات</li>
+    <li>القدرات — ٦-٨ مجالات دعم</li>
+    <li>المنظومة المحلية — الجهات الداعمة والتمويلية</li>
+    <li>منصة المزايا — الخصومات والامتيازات</li>
+    <li>الأدوات — المنظومة التقنية</li>
+    <li>المكتبة — المراجع المتخصصة</li>
+    <li>الأنظمة — المتطلبات التنظيمية</li>
+    <li>لماذا هذا الحل — مزايا المساعد + مؤهلات المستشار</li>
+    <li>الخطة — منهجية التنفيذ + رابط التدريب</li>
+  </ol>
+  <p><span class="deliverable">المُخرج:</span> صفحة على <span style="color:#00d4ff">github.io</span></p>
+</div>
+
+<h2>المرحلة الرابعة: الخطة التدريبية</h2>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٦</div><h3>بناء المنهج التدريبي</h3></div>
+  <p>٧ وحدات تدريبية قياسية، المحتوى يتغير حسب القطاع:</p>
+  <ol style="padding-right:20px;color:#b0b0c0;font-size:14px;line-height:2.2">
+    <li>أساسيات التعامل مع المساعد</li>
+    <li>أساسيات تشغيل المشروع في القطاع</li>
+    <li>استخدام نظام التشغيل الرئيسي</li>
+    <li>الإدارة المالية الأساسية</li>
+    <li>الامتثال التنظيمي والتراخيص</li>
+    <li>التسويق وبناء الحضور الرقمي</li>
+    <li>المزايا الحكومية — كيف تستفيد</li>
+  </ol>
+  <p><span class="deliverable">المُخرج:</span> صفحة tadreeb.html + جلسات مباشرة.</p>
+</div>
+
+<div class="phase">
+  <div class="phase-header"><div class="phase-num">٧</div><h3>ما يُنجز للعميل</h3></div>
+  <ul>
+    <li>التهيئة التقنية الكاملة (تثبيت، إعداد، ربط)</li>
+    <li>تجهيز منظومة الأدوات وتنسيق التوريد</li>
+    <li>برمجة وتخصيص المساعد الذكي</li>
+    <li>تزويد المساعد بقاعدة المعرفة</li>
+    <li>الدعم المستمر وتطوير القدرات</li>
+  </ul>
+</div>
+
+<h2>📋 ملخص المُخرَجات لكل عميل</h2>
+
+<div class="summary">
+  <p>
+    ١. <strong>مساعد ذكي مخصص</strong> — بشخصيته، اسمه، وقاعدة معرفته<br>
+    ٢. <strong>صفحة تعريفية</strong> — ١٠ أقسام على GitHub Pages<br>
+    ٣. <strong>خطة تدريبية</strong> — ٧ وحدات + ٣ مسارات تهيئة<br>
+    ٤. <strong>منظومة أدوات</strong> — مختارة للقطاع<br>
+    ٥. <strong>توثيق الأنظمة</strong> — الامتثال والتنظيم<br>
+    ٦. <strong>دعم مستمر</strong> — تطوير وتحديث
+  </p>
+</div>
+
+<h2>🔄 المتغيرات والثوابت</h2>
+
+<table>
+  <thead><tr><th>العنصر</th><th>النوع</th><th>ملاحظة</th></tr></thead>
+  <tbody>
+    <tr><td>اسم العميل</td><td>متغير</td><td>يظهر في كل مكان</td></tr>
+    <tr><td>القطاع وأدواته</td><td>متغير</td><td>يحدد المراجع والأدوات والأنظمة</td></tr>
+    <tr><td>اسم المساعد</td><td>متغير</td><td>يُشتق من العميل أو المجال</td></tr>
+    <tr><td>المراجع المتخصصة</td><td>متغير</td><td>حسب القطاع</td></tr>
+    <tr><td>منصة المزايا</td><td>ثابت</td><td>ثابت للسعودية</td></tr>
+    <tr><td>هيكل الصفحة (١٠ أقسام)</td><td>ثابت</td><td>نفس الهيكل لكل عميل</td></tr>
+    <tr><td>هيكل التدريب (٧ وحدات)</td><td>ثابت</td><td>المحتوى يتغير</td></tr>
+    <tr><td>مؤهلات المستشار</td><td>ثابت</td><td>نفس المؤهلات</td></tr>
+    <tr><td>الأنظمة المحلية</td><td>شبه ثابت</td><td>تتغير حسب القطاع</td></tr>
+  </tbody>
+</table>
+
+<h2>⏱ الوقت التقديري</h2>
+
+<table>
+  <thead><tr><th>المرحلة</th><th>الوقت</th></tr></thead>
+  <tbody>
+    <tr><td>الاكتشاف والتحليل</td><td>٦٠-٩٠ دقيقة</td></tr>
+    <tr><td>قاعدة المعرفة (SKILL.md)</td><td>٦٠-١٢٠ دقيقة</td></tr>
+    <tr><td>الصفحة التعريفية</td><td>٦٠-٩٠ دقيقة</td></tr>
+    <tr><td>الخطة التدريبية</td><td>٤٥-٦٠ دقيقة</td></tr>
+    <tr><td>التهيئة التقنية</td><td>٦٠ دقيقة</td></tr>
+    <tr><td><strong>الإجمالي</strong></td><td><strong>~٥-٦ ساعات لكل عميل</strong></td></tr>
+  </tbody>
+</table>
+
+<a href="https://yzzztech.github.io/abu-sanad/" class="back-link">← مثال تطبيقي: أبو سند</a>
+
+</div>
+
+<footer>Hermes Consulting Framework · ٢٠٢٦</footer>
+
+</body>
+</html>
