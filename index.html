@@ -82,9 +82,13 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .summary-banner { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
 .summary-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
 .summary-banner strong { color: #00d4ff; }
-.yaz-banner { background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,215,0,0.02)); border: 1px solid rgba(255,215,0,0.15); border-radius: 20px; padding: 28px; margin: 32px 0; text-align: center; }
-.yaz-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
-.yaz-banner strong { color: #ffd700; }
+.why-banner { background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,215,0,0.02)); border: 1px solid rgba(255,215,0,0.15); border-radius: 20px; padding: 32px; margin: 32px 0; }
+.why-banner p { color: #c0c0d0; font-size: 15px; line-height: 2; }
+.why-banner strong { color: #ffd700; }
+.exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 20px 0; }
+.exp-item { background: rgba(18,17,59,0.3); border: 1px solid rgba(255,255,255,0.04); border-radius: 12px; padding: 16px; text-align: center; }
+.exp-item .ex { font-size: 28px; color: #ffd700; font-weight: bold; }
+.exp-item .el { font-size: 12px; color: #8888a0; margin-top: 4px; }
 footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
 @media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .mazaya-grid { grid-template-columns: 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } .timeline-item { max-width: 100%; } }
@@ -131,25 +135,32 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 </section>
 
 <section id="why">
-  <h2>ليش "أبو سند" مختلف؟</h2>
+  <h2>ليش تثق إن "أبو سند" بيفيدك؟</h2>
 
-  <div class="yaz-banner">
+  <h3>سجلّ حقيقي، مو كلام</h3>
+  <div class="exp-grid">
+    <div class="exp-item"><div class="ex">٦+</div><div class="el">سنوات في التقنية وريادة الأعمال</div></div>
+    <div class="exp-item"><div class="ex">١٢</div><div class="el">كتاب تمت دراستها وتطبيقها</div></div>
+    <div class="exp-item"><div class="ex">1,683</div><div class="el">جهة في المنظومة السعودية تم تحليلها</div></div>
+    <div class="exp-item"><div class="ex">TechZilla</div><div class="el">شركة تقنية تجارية منذ ٢٠١٩</div></div>
+    <div class="exp-item"><div class="ex">Wateer</div><div class="el">منصة التسوية والفواتير الرقمية</div></div>
+    <div class="exp-item"><div class="ex">Hermes</div><div class="el">المنصة اللي يشتغل عليها أبو سند — مبنية من الصفر</div></div>
+  </div>
+
+  <div class="why-banner">
     <p>
-      <strong>أبو سند من بناء يزيد.</strong><br>
-      مو شركة. مو تطبيق جاهز. مو chatbot معمم.<br><br>
-      إنسان فاهم شغله، بنى هالشيء بيده، وراح يكون معاك خطوة بخطوة.<br>
-      لو احتجت شي — يزيد موجود. لو بغيت تعديل — يزيد يسويه.<br>
-      لو طلعت مشكلة — يزيد يصلحها.<br><br>
-      <strong>هذا هو الفرق.</strong>
+      <strong>وراء أبو سند شخص بنى، مو شخص تكلّم.</strong><br>
+      اللي بنى المنصة اللي تشتغل عليها. اللي دارس الكتب مو قارئها. اللي حلل 1,683 جهة في منظومة ريادة الأعمال السعودية عشان يعرف بالضبط وش يفيدك.<br><br>
+      اللي عنده علاقة مباشرة مع Intersoft. اللي يطوّر Wateer. اللي يشتغل على Foodics.<br><br>
+      مو شركة كبيرة تبيع لك اشتراك وتنساك. شخص واحد، يعرف اسمك، ويعرف شغلك، ووراك.<br><br>
+      <strong>هذا هو الفرق. وهذا ليش تاخذ منه.</strong>
     </p>
   </div>
 
   <ul class="features">
-    <li><span class="check">✓</span><div><strong>مبني لك، مو مبني للسوق</strong><br><span style="color:#8888a0">كل شي — من شخصية أبو سند لين الأدوات — مصمم خصيصاً لعبد الرحمن سندي. مو قالب جاهز.</span></div></li>
-    <li><span class="check">✓</span><div><strong>فاهم، مركز، وقدها</strong><br><span style="color:#8888a0">دارس ١٢ كتاب. ملم بمنظومة ريادة الأعمال السعودية. ملم بمزايا. صريح وما يجامل.</span></div></li>
-    <li><span class="check">✓</span><div><strong>وراه رجال</strong><br><span style="color:#8888a0">التقنية لحالها ما تكفي. اللي يفرّق إنك تعرف مين وراها. أبو سند = يزيد وراه.</span></div></li>
-    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي جديد — نضيفه. المهارات تكبر معك. مو منتج ثابت.</span></div></li>
-    <li><span class="check">✓</span><div><strong>بدون اشتراك. بدون التزام.</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر. الموديل (DeepSeek) مجاني. تكلفته الوحيدة = وقت يزيد اللي يعطيك إياه.</span></div></li>
+    <li><span class="check">✓</span><div><strong>مبني لك، مو مبني للسوق</strong><br><span style="color:#8888a0">كل شي — من شخصية أبو سند لين الأدوات — مصمم خصيصاً لعبد الرحمن سندي.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي جديد — ينضاف. المهارات تكبر معك. مو منتج ثابت ينتهي صلاحيته.</span></div></li>
+    <li><span class="check">✓</span><div><strong>بدون اشتراك. بدون التزام.</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر. الموديل (DeepSeek) مجاني. ما فيه رسوم خفية ولا عقود.</span></div></li>
   </ul>
 </section>
 
@@ -246,13 +257,13 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <h3>🚚 Food Truck & مطاعم</h3>
   <div class="book-grid">
     <div class="book-item"><div class="book-num gold">١</div><div class="book-info"><h4>The Food Truck Handbook</h4><div class="author">David Weber</div><div class="desc">الكتاب المرجعي: التريلة، التسعير، التراخيص.</div></div></div>
-    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div><div class="desc">أسطورة الضيافة.</div></div></div>
-    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div><div class="desc">تكلفة الطبق، نقطة التعادل.</div></div></div>
+    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div><div class="desc">أسطورة الضيافة — كيف تبني تجربة لا تُنسى.</div></div></div>
+    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div><div class="desc">تكلفة الطبق، نقطة التعادل، الأرقام ما تكذب.</div></div></div>
   </div>
   <h3>🧠 عقلية وريادة أعمال</h3>
   <div class="book-grid">
     <div class="book-item"><div class="book-num">٤</div><div class="book-info"><h4>The E-Myth Revisited</h4><div class="author">Michael Gerber</div><div class="desc">لا تخلط الطبّاخ برائد الأعمال.</div></div></div>
-    <div class="book-item"><div class="book-num">٥</div><div class="book-info"><h4>The Lean Startup</h4><div class="author">Eric Ries</div><div class="desc">اختبر فكرتك بأقل تكلفة.</div></div></div>
+    <div class="book-item"><div class="book-num">٥</div><div class="book-info"><h4>The Lean Startup</h4><div class="author">Eric Ries</div><div class="desc">اختبر فكرتك بأقل تكلفة قبل ما تستثمر.</div></div></div>
     <div class="book-item"><div class="book-num">٦</div><div class="book-info"><h4>$100 Startup</h4><div class="author">Chris Guillebeau</div><div class="desc">بزنسات بدأت بمبلغ بسيط ونجحت.</div></div></div>
   </div>
   <h3>🍳 طعام | 📱 تسويق | 🇸🇦 سعودي</h3>
@@ -294,11 +305,11 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 
 <section style="text-align:center;padding-bottom:100px">
   <h2>جاهز تبدأ يا عبد الرحمن؟</h2>
-  <p style="color:#8888a0;max-width:500px;margin:0 auto 32px;font-size:17px">أبو سند = سندك. ويزيد = اللي وراه.</p>
+  <p style="color:#8888a0;max-width:500px;margin:0 auto 32px;font-size:17px">أبو سند = سندك. واللي وراه ما راح يخذلك.</p>
   <a href="#hero" class="cta">🚚 خلنا نبدأ!</a>
 </section>
 
-<footer>أبو سند · من بناء يزيد · لعبد الرحمن سندي · ٢٠٢٦</footer>
+<footer>أبو سند · لعبد الرحمن سندي · ٢٠٢٦</footer>
 
 <script>
 const c=document.getElementById('particles'),x=c.getContext('2d');
