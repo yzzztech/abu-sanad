@@ -1,1 +1,312 @@
-...
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أبو سند — المستشار الذكي لعربة عبد الرحمن سندي</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a1a; color: #e0e0e0; font-family: Tahoma, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; overflow-x: hidden; }
+.particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,30,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 16px 24px; display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+nav a { color: #8888a0; text-decoration: none; font-size: 14px; transition: color 0.2s; padding: 6px 12px; border-radius: 8px; }
+nav a:hover { color: #00d4ff; background: rgba(0,212,255,0.06); }
+.hero { position: relative; z-index: 1; text-align: center; padding: 100px 24px 80px; }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.12) 0%, transparent 70%); }
+.hero .truck-icon { font-size: 80px; margin-bottom: 24px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-16px)} }
+.hero h1 { font-size: clamp(36px, 6vw, 64px); background: linear-gradient(135deg, #fff 30%, #00d4ff 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
+.hero .owner { color: #00d4ff; font-size: 22px; margin-bottom: 20px; }
+.hero p { color: #8888a0; font-size: 20px; max-width: 640px; margin: 0 auto 32px; }
+.cta { display: inline-block; background: linear-gradient(135deg, #00d4ff, #0088cc); color: #0a0a1a; font-weight: bold; font-size: 18px; padding: 16px 40px; border-radius: 50px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+.cta:hover { transform: scale(1.06); box-shadow: 0 0 40px rgba(0,212,255,0.3); }
+section { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+section h2 { font-size: 32px; margin-bottom: 40px; background: linear-gradient(135deg, #fff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
+section h3 { color: #00d4ff; font-size: 22px; margin: 32px 0 16px; }
+section h3:first-of-type { margin-top: 0; }
+section p, section li { color: #b0b0c0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.card { background: rgba(18,17,59,0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 32px; cursor: pointer; transition: all 0.3s ease; }
+.card:hover { transform: translateY(-8px); border-color: rgba(0,212,255,0.3); box-shadow: 0 12px 40px rgba(0,212,255,0.08); }
+.card .icon { font-size: 48px; margin-bottom: 16px; }
+.card h3 { font-size: 20px; color: #fff; margin: 0 0 8px; }
+.card .preview { color: #8888a0; font-size: 14px; }
+.card .detail { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.card .detail.open { max-height: 500px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+.card .detail p { color: #aaa; font-size: 14px; line-height: 1.9; }
+.features { list-style: none; padding: 0; }
+.features li { background: rgba(18,17,59,0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; display: flex; align-items: center; gap: 16px; transition: all 0.3s; }
+.features li:hover { border-color: rgba(0,212,255,0.15); transform: translateX(-4px); }
+.features .check { font-size: 22px; color: #4caf50; flex-shrink: 0; }
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+.price-card { background: rgba(18,17,59,0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 28px 20px; }
+.price-card.zero { border-color: rgba(76,175,80,0.3); background: rgba(18,17,59,0.7); }
+.price-card .amount { font-size: 36px; font-weight: bold; background: linear-gradient(135deg, #4caf50, #81c784); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.price-card .label { color: #8888a0; margin-top: 8px; font-size: 14px; }
+table { width: 100%; border-spacing: 0 6px; border-collapse: separate; margin: 20px 0; font-size: 14px; }
+thead th { text-align: right; color: #8888a0; font-size: 13px; font-weight: 500; padding: 0 12px 8px; }
+tbody td { background: rgba(18,17,59,0.35); padding: 12px 14px; color: #c0c0d0; vertical-align: top; }
+tbody tr td:first-child { border-radius: 0 10px 10px 0; font-weight: 600; color: #fff; white-space: nowrap; }
+tbody tr td:last-child { border-radius: 10px 0 0 10px; }
+tbody tr:hover td { background: rgba(0,212,255,0.06); }
+.highlight { color: #4caf50; font-weight: bold; }
+.note { color: #ffd700; font-weight: bold; }
+.timeline { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; }
+.timeline-item { text-align: center; background: rgba(18,17,59,0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 24px; max-width: 280px; }
+.timeline-item .step { display: inline-block; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #00d4ff, #006699); color: #fff; font-size: 22px; font-weight: bold; line-height: 48px; margin-bottom: 16px; }
+.timeline-item h4 { margin-bottom: 8px; color: #fff; }
+.timeline-item p { color: #8888a0; font-size: 14px; }
+.book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.book-item { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start; transition: all 0.3s; }
+.book-item:hover { border-color: rgba(0,212,255,0.15); background: rgba(18,17,59,0.5); }
+.book-num { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #00d4ff, #006699); color: #fff; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.book-num.gold { background: linear-gradient(135deg, #ffd700, #c9a000); color: #0a0a1a; }
+.book-info h4 { font-size: 16px; color: #fff; margin-bottom: 4px; }
+.book-info .author { font-size: 12px; color: #8888a0; font-style: italic; margin-bottom: 4px; }
+.book-info .desc { font-size: 13px; color: #a0a0b8; line-height: 1.7; }
+.tool-cat { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+.tool-cat h4 { color: #00d4ff; font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.tool-cat h4 .ico { font-size: 22px; }
+.mazaya-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0; }
+.mazaya-item { background: rgba(18,17,59,0.35); border: 1px solid rgba(0,212,255,0.08); border-radius: 14px; padding: 20px; transition: all 0.3s; }
+.mazaya-item:hover { border-color: rgba(0,212,255,0.2); background: rgba(18,17,59,0.5); }
+.mazaya-item .m-icon { font-size: 32px; margin-bottom: 10px; }
+.mazaya-item h4 { color: #fff; font-size: 16px; margin-bottom: 8px; }
+.mazaya-item ul { list-style: none; padding: 0; }
+.mazaya-item li { color: #a0a0b8; font-size: 13px; line-height: 1.9; }
+.mazaya-item li::before { content: '• '; color: #00d4ff; }
+.ecosystem-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0; }
+.ecosystem-badge { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,136,204,0.08)); border: 1px solid rgba(0,212,255,0.15); border-radius: 12px; padding: 16px 20px; flex: 1; min-width: 200px; }
+.ecosystem-badge .e-label { color: #00d4ff; font-size: 13px; margin-bottom: 6px; }
+.ecosystem-badge .e-name { color: #fff; font-size: 16px; font-weight: bold; }
+.summary-banner { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
+.summary-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
+.summary-banner strong { color: #00d4ff; }
+.yaz-banner { background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,215,0,0.02)); border: 1px solid rgba(255,215,0,0.15); border-radius: 20px; padding: 28px; margin: 32px 0; text-align: center; }
+.yaz-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
+.yaz-banner strong { color: #ffd700; }
+footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
+@media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .mazaya-grid { grid-template-columns: 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } .timeline-item { max-width: 100%; } }
+</style>
+</head>
+<body>
+<canvas class="particles" id="particles"></canvas>
+<nav>
+  <a href="#hero">الرئيسية</a><a href="#what">وش بيكون؟</a><a href="#skills">المهارات</a>
+  <a href="#ecosystem">المنظومة</a><a href="#mazaya">مزايا</a><a href="#tools">الأدوات</a>
+  <a href="#books">المكتبة</a><a href="#regulations">الأنظمة</a><a href="#why">ليش أبو سند؟</a><a href="#plan">الخطة</a>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="truck-icon">🚚</div>
+  <h1>أبو سند</h1>
+  <div class="owner">لعبد الرحمن سندي</div>
+  <p>مستشار ذكي لعربة طعامك — بسيط، صبور، يتكلم عامية. تواصل معه من تيليقرام، وبياناتك على جهازك. فاهم، مركز، وقدها.</p>
+  <a href="#what" class="cta">كيف يشتغل؟</a>
+</section>
+
+<section id="what">
+  <h2>وش بيكون "أبو سند"؟</h2>
+  <div class="cards">
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">فاهم مجال المطاعم و F&B من الألف للياء — اضغط للتفاصيل</div><div class="detail"><p>مبرمج خصيصاً لمجال المطاعم وعربات الطعام. دارس ١٢ كتاب في food truck، ريادة الأعمال، الطهي، والتسويق. ملم بمنظومة ريادة الأعمال السعودية: التمويل، التراخيص، منصة مزايا، الجهات الداعمة. مب مساعد عام — هذا متخصص في شغلك.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">ما يحتاج تكتب إنجليزي ولا مصطلحات — اضغط للتفاصيل</div><div class="detail"><p>تكتب له سؤالك بالعامية السعودية ويرد عليك بصبر وبساطة. صريح وما يجامل — إذا شي غلط بيقولك غلط. لو ما فهمت، يعيد الشرح. دايم يشجعك ويحمسك. كأنك تكلم مستشار مخضرم خبرته ٢٠ سنة.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تواصل معه من تيليقرام</h3><div class="preview">اسأله من جوالك في أي وقت — اضغط للتفاصيل</div><div class="detail"><p>أبو سند مربوط بتليقرام. تفتح الشات وتكتب سؤالك — يرد عليك فوراً. وأنت في التريلة، في السوق، أو في البيت. ما تحتاج تفتح كمبيوتر ولا برامج.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🔒</div><h3>بياناتك على جهازك</h3><div class="preview">خصوصيتك أولاً — اضغط للتفاصيل</div><div class="detail"><p>البرنامج (Hermes Agent) يشتغل على جهازك الشخصي. كل بياناتك — مبيعات، قوائم، مشتريات — محفوظة عندك. الموديل يحتاج إنترنت (DeepSeek API)، لكن محد يخزّن بياناتك.</p></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>المهارات — وش بيساعدك فيه؟</h2>
+  <div class="cards">
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📋</div><h3>تخطيط قائمة الطعام</h3><div class="preview">يساعدك تصمم القائمة — اضغط للتفاصيل</div><div class="detail"><p>خطط لقائمتك: ايش الأطباق اللي تنفع لـ food truck؟ كيف تسعّر كل طبق؟ وش التكلفة الحقيقية لكل وجبة؟ يعطيك تحليل كامل للتسعير وهوامش الربح من كتاب Restaurant Success by the Numbers.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📦</div><h3>المخزون والمشتريات</h3><div class="preview">قائمة مشتريات ذكية — اضغط للتفاصيل</div><div class="detail"><p>يحسب لك الكميات اللي تحتاجها بناءً على قائمتك. يعطيك قائمة مشتريات جاهزة قبل كل يومية. يساعدك تقارن أسعار الموردين. يتابع المخزون.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💰</div><h3>حسابات يومية</h3><div class="preview">دخل، مصروف، أرباح — بكل بساطة</div><div class="detail"><p>جدول بسيط تدخل فيه دخل اليوم ومصروفاتك. يحسب الربح الصافي تلقائياً. تقارير أسبوعية وشهرية. كل شي بالعربي.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">⚙️</div><h3>تشغيل يومي</h3><div class="preview">نصائح عملية لكل يوم</div><div class="detail"><p>وش تسوي قبل ما تفتح؟ كيف تنظم وقت الذروة؟ كيف تتعامل مع الزباين؟ من كتاب Setting the Table: الضيافة تفرق.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📜</div><h3>تراخيص وبلدية</h3><div class="preview">إجراءات رسمية مبسطة</div><div class="detail"><p>يعرفك على اشتراطات البلدية الصحية. يساعدك تجهز الأوراق. يذكرك بمواعيد التجديد. ملم بمنصة بلدي ومنشآت.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تسويق ووسائل التواصل</h3><div class="preview">أفكار تسويقية بسيطة وفعّالة</div><div class="detail"><p>أفكار لستوري سناب وانستغرام. كيف تصور أطباقك بشكل يشهّي. من كتابي Jab Jab Right Hook و Contagious: كيف تبني جمهور وتخلي فكرتك تنتشر.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🍳</div><h3>وصفات وأفكار جديدة</h3><div class="preview">أفكار إبداعية لقائمة متنوعة</div><div class="detail"><p>يعطيك أفكار وصفات تنفع للـ food truck. من Flavor Bible و Salt Fat Acid Heat: اقتراحات مبنية على علم النكهات.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🎯</div><h3>تخطيط واستراتيجية</h3><div class="preview">وش تسوي بعد ٦ شهور؟</div><div class="detail"><p>مو بس يوميات — يساعدك تخطط للمستقبل. متى توسع؟ كيف تزيد أرباحك؟ من E-Myth و Lean Startup: كيف تبني بزنس مو بس وظيفة.</p></div></div>
+  </div>
+</section>
+
+<section id="why">
+  <h2>ليش "أبو سند" مختلف؟</h2>
+
+  <div class="yaz-banner">
+    <p>
+      <strong>أبو سند من بناء يزيد.</strong><br>
+      مو شركة. مو تطبيق جاهز. مو chatbot معمم.<br><br>
+      إنسان فاهم شغله، بنى هالشيء بيده، وراح يكون معاك خطوة بخطوة.<br>
+      لو احتجت شي — يزيد موجود. لو بغيت تعديل — يزيد يسويه.<br>
+      لو طلعت مشكلة — يزيد يصلحها.<br><br>
+      <strong>هذا هو الفرق.</strong>
+    </p>
+  </div>
+
+  <ul class="features">
+    <li><span class="check">✓</span><div><strong>مبني لك، مو مبني للسوق</strong><br><span style="color:#8888a0">كل شي — من شخصية أبو سند لين الأدوات — مصمم خصيصاً لعبد الرحمن سندي. مو قالب جاهز.</span></div></li>
+    <li><span class="check">✓</span><div><strong>فاهم، مركز، وقدها</strong><br><span style="color:#8888a0">دارس ١٢ كتاب. ملم بمنظومة ريادة الأعمال السعودية. ملم بمزايا. صريح وما يجامل.</span></div></li>
+    <li><span class="check">✓</span><div><strong>وراه رجال</strong><br><span style="color:#8888a0">التقنية لحالها ما تكفي. اللي يفرّق إنك تعرف مين وراها. أبو سند = يزيد وراه.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي جديد — نضيفه. المهارات تكبر معك. مو منتج ثابت.</span></div></li>
+    <li><span class="check">✓</span><div><strong>بدون اشتراك. بدون التزام.</strong><br><span style="color:#8888a0">البرنامج مفتوح المصدر. الموديل (DeepSeek) مجاني. تكلفته الوحيدة = وقت يزيد اللي يعطيك إياه.</span></div></li>
+  </ul>
+</section>
+
+<section id="ecosystem">
+  <h2>🌐 منظومة ريادة الأعمال السعودية</h2>
+  <p style="color:#8888a0;margin-bottom:32px">عبد الرحمن، أنت مو لحالك. ٥ مستويات من الدعم — من التمويل لين التدريب.</p>
+  <div class="ecosystem-row">
+    <div class="ecosystem-badge"><div class="e-label">💰 تمويل وقروض</div><div class="e-name">نايلة، ريادة، كفالة، واعد، بنك التنمية</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🏛️ دعم وتمكين</div><div class="e-name">منشآت، جمعية ريادة الأعمال، مسك، الكراج</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🎫 مزايا وخصومات</div><div class="e-name">منصة مزايا (تحت منشآت)</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🏫 حاضنات</div><div class="e-name">فيودكس، الهيدب، نكون، تسامي</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🎓 تدريب</div><div class="e-name">دورات منشآت، مسك، كاوست</div></div>
+  </div>
+  <h3>💰 جهات التمويل والقروض</h3>
+  <table>
+    <thead><tr><th>الجهة</th><th>النوع</th><th>وش يقدم</th></tr></thead>
+    <tbody>
+      <tr><td><strong>نايلة للتمويل</strong></td><td>قروض صغيرة</td><td>للبزنسات ≤ ٣ مليون سنوياً. ⭐ <span class="highlight">الأنسب لعربة طعام</span></td></tr>
+      <tr><td><strong>ريادة</strong></td><td>قروض + تدريب</td><td>لحد ٣٠٠ ألف. تمر ببرنامج تدريبي</td></tr>
+      <tr><td><strong>كفالة</strong></td><td>ضمانات</td><td>تضمن قرضك عند البنوك</td></tr>
+      <tr><td><strong>واعد (أرامكو)</strong></td><td>قروض مباشرة</td><td>شروط عادلة لرواد الأعمال الجادين</td></tr>
+      <tr><td><strong>بنك التنمية الاجتماعية</strong></td><td>قروض حكومية</td><td>العمود الفقري للتمويل</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="mazaya">
+  <h2>🎫 منصة "مزايا" — تحت منشآت</h2>
+  <p style="color:#8888a0;margin-bottom:20px"><strong>خصومات وامتيازات حصرية</strong> للمنشآت الصغيرة والمتوسطة.</p>
+  <div class="mazaya-grid">
+    <div class="mazaya-item"><div class="m-icon">🏦</div><h4>بنوك وخدمات مالية</h4><ul><li>حسابات تجارية بدون رسوم</li><li>خصم على أجهزة POS</li><li>تسهيلات ائتمانية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">💳</div><h4>مدفوعات وتقنية مالية</h4><ul><li>خصم على بوابات الدفع</li><li>رسوم مخفّضة mada / STC Pay</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي — للعمالة</h4><ul><li>تأمين صحي للعمالة</li><li>أسعار مخفّضة للمجموعات</li><li>خطط تغطية متعددة</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🛡️</div><h4>تأمين تجاري</h4><ul><li>تأمين المركبات التجارية</li><li>تأمين المسؤولية العامة</li><li>تأمين الممتلكات والمعدات</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📡</div><h4>اتصالات وتقنية</h4><ul><li>خصم على باقات الإنترنت</li><li>عروض جوالات الأعمال</li><li>خدمات سحابية مخفضة</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📣</div><h4>خدمات تسويقية</h4><ul><li>أرصدة إعلانية مجانية</li><li>خصم على منصات التسويق</li><li>تصميم هوية وشعار</li><li>تصوير احترافي</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">⚖️</div><h4>خدمات قانونية</h4><ul><li>استشارات قانونية</li><li>صياغة عقود العمل</li><li>اتفاقيات الموردين</li><li>تسجيل علامة تجارية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🚚</div><h4>توصيل ولوجستيات</h4><ul><li>عروض شحن وتوصيل</li><li>خصم من شركات التوصيل</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🎓</div><h4>تدريب واستشارات</h4><ul><li>دورات إدارة أعمال</li><li>ورش عمل متخصصة</li><li>جلسات إرشاد (Mentoring)</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏢</div><h4>مساحات عمل ومكاتب</h4><ul><li>خصم على مساحات العمل</li><li>قاعات اجتماعات</li><li>مطابخ تحضير تجارية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📋</div><h4>خدمات حكومية</h4><ul><li>تسهيل إجراءات السجل التجاري</li><li>تسريع التراخيص البلدية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🔐</div><h4>أمن سيبراني وتقنية</h4><ul><li>حماية بيانات العملاء</li><li>امتثال PDPL</li></ul></div>
+  </div>
+</section>
+
+<section id="tools">
+  <h2>🧰 حقيبة الأدوات</h2>
+
+  <div class="tool-cat">
+    <h4><span class="ico">💳</span> نقطة البيع — Foodics</h4>
+    <table><thead><tr><th>العنصر</th><th>التفاصيل</th></tr></thead><tbody>
+      <tr><td>النظام</td><td><strong><a href="https://www.foodics.com/" target="_blank" style="color:#00d4ff">Foodics</a></strong> — نظام كاشير سحابي رائد</td></tr>
+      <tr><td>المحاسبة</td><td>يدعم <span class="highlight">رفع الفواتير إلى ZATCA Phase 2</span></td></tr>
+      <tr><td>المدفوعات</td><td>يدعم mada و STC Pay و Apple Pay</td></tr>
+      <tr><td><strong>CRM</strong></td><td>يدعم <span class="highlight">إدارة العملاء</span> — قائمة عملاء، سجل طلبات، تفاعل</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="tool-cat">
+    <h4><span class="ico">📟</span> الأجهزة</h4>
+    <table><thead><tr><th>الجهاز</th><th>المزوّد</th><th>الوظيفة</th></tr></thead><tbody>
+      <tr><td><strong>جهاز الكاشير</strong></td><td>Foodics</td><td>نقطة البيع الرئيسية — الطلبات والفواتير</td></tr>
+      <tr><td><strong>جهاز المدفوعات الشبكية</strong></td><td><span class="highlight">Intersoft</span></td><td>يقبل <span class="note">Apple Pay</span> والمدفوعات اللاتلامسية</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="tool-cat">
+    <h4><span class="ico">🧾</span> التسوية والمطابقة — Wateer</h4>
+    <table><thead><tr><th>العنصر</th><th>التفاصيل</th></tr></thead><tbody>
+      <tr><td>النظام</td><td><strong><a href="https://wateer.sa/" target="_blank" style="color:#00d4ff">Wateer</a></strong> — تسوية ومطابقة بنكية</td></tr>
+      <tr><td>المطابقة</td><td><span class="highlight">مطابقة الإيصالات مع التسويات البنكية</span></td></tr>
+      <tr><td>الفوترة</td><td>يقدم <span class="note">الفواتير الرقمية بهويتك</span></td></tr>
+      <tr><td>التكامل</td><td><span class="highlight">ربط مباشر مع Foodics</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="tool-cat">
+    <h4><span class="ico">📦</span> باقي الأدوات</h4>
+    <table><thead><tr><th>الفئة</th><th>الأداة</th></tr></thead><tbody>
+      <tr><td>مخزون</td><td>Foodics Inventory (مدمج)</td></tr>
+      <tr><td>تسويق</td><td>Canva + Meta Business Suite</td></tr>
+      <tr><td>توصيل</td><td>Jahez أو HungerStation</td></tr>
+      <tr><td>تحليل</td><td>Foodics Dashboard + Google Sheets</td></tr>
+      <tr><td>إدارة</td><td>Notion + Google Calendar</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="summary-banner"><p><strong>🎯 الـ Stack:</strong> Foodics (POS + CRM + زاتكا) ← كاشير Foodics + مدفوعات Intersoft ← Wateer للتسوية والفواتير ← Canva ← Google Sheets</p></div>
+</section>
+
+<section id="books">
+  <h2>📚 مكتبة أبو سند — ١٢ كتاب</h2>
+  <p style="color:#8888a0;margin-bottom:32px">الكتب اللي دارسها أبو سند ويطبقها عملياً.</p>
+  <h3>🚚 Food Truck & مطاعم</h3>
+  <div class="book-grid">
+    <div class="book-item"><div class="book-num gold">١</div><div class="book-info"><h4>The Food Truck Handbook</h4><div class="author">David Weber</div><div class="desc">الكتاب المرجعي: التريلة، التسعير، التراخيص.</div></div></div>
+    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div><div class="desc">أسطورة الضيافة.</div></div></div>
+    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div><div class="desc">تكلفة الطبق، نقطة التعادل.</div></div></div>
+  </div>
+  <h3>🧠 عقلية وريادة أعمال</h3>
+  <div class="book-grid">
+    <div class="book-item"><div class="book-num">٤</div><div class="book-info"><h4>The E-Myth Revisited</h4><div class="author">Michael Gerber</div><div class="desc">لا تخلط الطبّاخ برائد الأعمال.</div></div></div>
+    <div class="book-item"><div class="book-num">٥</div><div class="book-info"><h4>The Lean Startup</h4><div class="author">Eric Ries</div><div class="desc">اختبر فكرتك بأقل تكلفة.</div></div></div>
+    <div class="book-item"><div class="book-num">٦</div><div class="book-info"><h4>$100 Startup</h4><div class="author">Chris Guillebeau</div><div class="desc">بزنسات بدأت بمبلغ بسيط ونجحت.</div></div></div>
+  </div>
+  <h3>🍳 طعام | 📱 تسويق | 🇸🇦 سعودي</h3>
+  <div class="book-grid">
+    <div class="book-item"><div class="book-num">٧</div><div class="book-info"><h4>The Flavor Bible</h4><div class="author">Page & Dornenburg</div></div></div>
+    <div class="book-item"><div class="book-num">٨</div><div class="book-info"><h4>Salt, Fat, Acid, Heat</h4><div class="author">Samin Nosrat</div></div></div>
+    <div class="book-item"><div class="book-num">٩</div><div class="book-info"><h4>Saudi Feast</h4><div class="author">طهّاة سعوديون</div></div></div>
+    <div class="book-item"><div class="book-num">١٠</div><div class="book-info"><h4>Jab, Jab, Jab, Right Hook</h4><div class="author">Gary Vaynerchuk</div></div></div>
+    <div class="book-item"><div class="book-num">١١</div><div class="book-info"><h4>Contagious</h4><div class="author">Jonah Berger</div></div></div>
+    <div class="book-item"><div class="book-num">١٢</div><div class="book-info"><h4>سيرة رائد أعمال سعودي</h4><div class="author">سوق التجّار</div></div></div>
+  </div>
+</section>
+
+<section id="regulations">
+  <h2>📜 الأنظمة واللوائح</h2>
+  <div class="tool-cat"><h4><span class="ico">🏛️</span> التراخيص</h4><table><thead><tr><th>المطلب</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>سجل تجاري</strong></td><td>وزارة التجارة</td></tr><tr><td><strong>رخصة بلدية</strong></td><td>أمانة المنطقة — بلدي</td></tr><tr><td><strong>شهادة صحية</strong></td><td>البلدية — لكل عامل</td></tr></tbody></table></div>
+  <div class="tool-cat"><h4><span class="ico">💰</span> مالية وضريبية</h4><table><thead><tr><th>النظام</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>ضريبة القيمة المضافة</strong></td><td>ZATCA — فوق ٣٧٥ ألف</td></tr><tr><td><strong>الفوترة الإلكترونية</strong></td><td>ZATCA Phase 2 — <span class="highlight">Foodics + Wateer ✅</span></td></tr></tbody></table></div>
+  <div class="tool-cat"><h4><span class="ico">👷</span> عمالية</h4><table><thead><tr><th>النظام</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>نظام العمل</strong></td><td>الموارد البشرية</td></tr><tr><td><strong>التأمينات</strong></td><td>GOSI</td></tr></tbody></table></div>
+</section>
+
+<section id="cost">
+  <h2>التكلفة = صفر</h2>
+  <div class="price-grid">
+    <div class="price-card"><div class="amount" style="background:linear-gradient(135deg,#00d4ff,#006699);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$0</div><div class="label">البرنامج<br>Hermes Agent</div></div>
+    <div class="price-card"><div class="amount" style="background:linear-gradient(135deg,#00d4ff,#006699);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$0</div><div class="label">الموديل الذكي<br>DeepSeek API</div></div>
+    <div class="price-card"><div class="amount" style="background:linear-gradient(135deg,#00d4ff,#006699);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">$0</div><div class="label">الإعداد والتخصيص<br>نسويه لك مجاناً</div></div>
+    <div class="price-card zero"><div class="amount">$0</div><div class="label">الإجمالي الشهري<br>ولا ريال</div></div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>خطة التنفيذ مع عبد الرحمن</h2>
+  <div class="timeline">
+    <div class="timeline-item"><div class="step">1</div><h4>جلسة تثبيت</h4><p>نثبت البرنامج، نضبط أبو سند، نربطه بتليقرام.</p></div>
+    <div class="timeline-item"><div class="step">2</div><h4>فترة تجربة</h4><p>أسبوع يستخدمه. نجمع ملاحظاته.</p></div>
+    <div class="timeline-item"><div class="step">3</div><h4>دعم مستمر</h4><p>أي شي جديد — نضيفه. معه دايم.</p></div>
+  </div>
+</section>
+
+<section style="text-align:center;padding-bottom:100px">
+  <h2>جاهز تبدأ يا عبد الرحمن؟</h2>
+  <p style="color:#8888a0;max-width:500px;margin:0 auto 32px;font-size:17px">أبو سند = سندك. ويزيد = اللي وراه.</p>
+  <a href="#hero" class="cta">🚚 خلنا نبدأ!</a>
+</section>
+
+<footer>أبو سند · من بناء يزيد · لعبد الرحمن سندي · ٢٠٢٦</footer>
+
+<script>
+const c=document.getElementById('particles'),x=c.getContext('2d');
+function r(){c.width=innerWidth;c.height=innerHeight}r();
+const p=Array.from({length:50},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+.3,a:Math.random()*Math.PI*2,s:Math.random()*.3+.1,o:Math.random()*.3+.1}));
+function A(){x.clearRect(0,0,c.width,c.height);p.forEach(t=>{t.a+=t.s*.01;t.y-=t.s*.3;if(t.y<-10)t.y=c.height+10;const o=t.o+Math.sin(t.a)*.15;x.beginPath();x.arc(t.x,t.y,t.r,0,Math.PI*2);x.fillStyle=`rgba(0,212,255,${o})`;x.fill()});requestAnimationFrame(A)}A();
+window.addEventListener('resize',r);
+document.querySelectorAll('nav a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body>
+</html>
