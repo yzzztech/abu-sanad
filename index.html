@@ -68,13 +68,6 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .tool-cat h4 { color: #00d4ff; font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .tool-cat h4 .ico { font-size: 22px; }
 .mazaya-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0; }
-.mazaya-item { background: rgba(18,17,59,0.35); border: 1px solid rgba(0,212,255,0.08); border-radius: 14px; padding: 20px; transition: all 0.3s; }
-.mazaya-item:hover { border-color: rgba(0,212,255,0.2); background: rgba(18,17,59,0.5); }
-.mazaya-item .m-icon { font-size: 32px; margin-bottom: 10px; }
-.mazaya-item h4 { color: #fff; font-size: 16px; margin-bottom: 8px; }
-.mazaya-item ul { list-style: none; padding: 0; }
-.mazaya-item li { color: #a0a0b8; font-size: 13px; line-height: 1.9; }
-.mazaya-item li::before { content: '• '; color: #00d4ff; }
 .ecosystem-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0; }
 .ecosystem-badge { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,136,204,0.08)); border: 1px solid rgba(0,212,255,0.15); border-radius: 12px; padding: 16px 20px; flex: 1; min-width: 200px; }
 .ecosystem-badge .e-label { color: #00d4ff; font-size: 13px; margin-bottom: 6px; }
@@ -82,21 +75,18 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .summary-banner { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
 .summary-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
 .summary-banner strong { color: #00d4ff; }
-.why-banner { background: linear-gradient(135deg, rgba(255,215,0,0.04), rgba(255,215,0,0.01)); border: 1px solid rgba(255,215,0,0.12); border-radius: 20px; padding: 32px; margin: 32px 0; }
-.why-banner p { color: #c0c0d0; font-size: 15px; line-height: 2; }
-.why-banner strong { color: #ffd700; }
-.cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0; }
-.cred-item { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,215,0,0.12); border-radius: 12px; padding: 20px 16px; text-align: center; transition: all 0.3s; }
-.cred-item:hover { border-color: rgba(255,215,0,0.3); background: rgba(18,17,59,0.5); }
-.cred-item .cr { font-size: 22px; color: #ffd700; font-weight: bold; margin-bottom: 6px; }
-.cred-item .cl { font-size: 12px; color: #8888a0; line-height: 1.6; }
-.logo-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px 0; }
-.logo-badge { background: rgba(18,17,59,0.4); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 18px; text-align: center; font-size: 13px; color: #a0a0b8; transition: all 0.3s; min-width: 130px; }
-.logo-badge:hover { border-color: rgba(0,212,255,0.25); color: #e0e0e0; }
-.logo-badge .lb-name { font-weight: bold; color: #e0e0e0; }
-.logo-badge .lb-sub { font-size: 11px; color: #8888a0; margin-top: 2px; }
+.who-banner { background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(0,136,204,0.04)); border: 1px solid rgba(0,212,255,0.15); border-radius: 20px; padding: 28px; margin: 32px 0; }
+.who-banner p { color: #c0c0d0; font-size: 15px; line-height: 2; }
+.who-banner strong { color: #00d4ff; }
+.cred-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 16px 0; }
+.cred-item { background: rgba(18,17,59,0.3); border: 1px solid rgba(0,212,255,0.08); border-radius: 10px; padding: 14px; text-align: center; }
+.cred-item .cr { font-size: 20px; color: #00d4ff; font-weight: bold; margin-bottom: 4px; }
+.cred-item .cl { font-size: 11px; color: #8888a0; line-height: 1.5; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0; }
+.badge-row span { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 8px 14px; font-size: 12px; color: #a0a0b8; }
+.badge-row span strong { color: #e0e0e0; }
 footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
-@media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .mazaya-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } .timeline-item { max-width: 100%; } }
 </style>
 </head>
@@ -129,52 +119,54 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="skills">
   <h2>القدرات — وش بيساعدك فيه؟</h2>
   <div class="cards">
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📋</div><h3>تخطيط قائمة الطعام</h3><div class="preview">تصميم القائمة وهيكلة الأسعار</div><div class="detail"><p>خطّط لقائمتك: إيش الأطباق اللي تنفع لـ food truck؟ كيف تسعّر كل طبق؟ يعطيك تحليل تسعيري كامل مع هوامش الربح. أطباق سريعة التحضير، طلبها عالي.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📦</div><h3>المخزون والمشتريات</h3><div class="preview">تقدير الاحتياجات وتحسين التوريد</div><div class="detail"><p>يحسب لك الكميات بناءً على قائمتك وعدد العملاء. يعطيك قائمة مشتريات جاهزة. يساعدك تقارن أسعار الموردين. يتابع المخزون وينبهك.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💰</div><h3>حسابات يومية</h3><div class="preview">تتبع الإيرادات والمصروفات والأرباح</div><div class="detail"><p>نظام تتبع مالي بسيط: تدخل الإيرادات والمصروفات، يحسب صافي الربح تلقائياً. تقارير أسبوعية وشهرية. كل شي بالعربي.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">⚙️</div><h3>تشغيل يومي</h3><div class="preview">إجراءات ونصائح عملية</div><div class="detail"><p>وش تسوي قبل ما تفتح؟ كيف تنظّم وقت الذروة؟ كيف تتعامل مع العملاء؟ شيك ليست يومي. أفضل ممارسات الضيافة.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📜</div><h3>تراخيص وبلدية</h3><div class="preview">إرشادات تنظيمية وإجرائية</div><div class="detail"><p>يعرّفك على الاشتراطات الصحية البلدية. يساعدك تجهز الأوراق. يذكّرك بمواعيد التجديد. ملم بمنصة بلدي ومنشآت.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تسويق وتواصل</h3><div class="preview">استراتيجيات عملية وفعّالة</div><div class="detail"><p>أفكار لستوري سناب وانستغرام. كيف تصوّر أطباقك. عروض افتتاحية. كيف تبني جمهور وتخلي فكرتك تنتشر.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🍳</div><h3>وصفات وأفكار جديدة</h3><div class="preview">ابتكار أطباق للقائمة</div><div class="detail"><p>اقتراح وصفات تنفع لـ food truck: سريعة التحضير، تكلفتها مناسبة، وشكلها يشهّي. توليفات نكهات جديدة.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🎯</div><h3>تخطيط واستراتيجية</h3><div class="preview">رؤية للنمو والتوسع</div><div class="detail"><p>مو بس يوميات — تخطيط مستقبلي: متى تتوسع؟ كيف تزيد أرباحك؟ أي موقع أفضل؟ استشارات مبنية على بياناتك.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📋</div><h3>تخطيط قائمة الطعام</h3><div class="preview">تصميم القائمة وهيكلة الأسعار</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📦</div><h3>المخزون والمشتريات</h3><div class="preview">تقدير الاحتياجات وتحسين التوريد</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💰</div><h3>حسابات يومية</h3><div class="preview">تتبع الإيرادات والمصروفات والأرباح</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">⚙️</div><h3>تشغيل يومي</h3><div class="preview">إجراءات ونصائح عملية</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📜</div><h3>تراخيص وبلدية</h3><div class="preview">إرشادات تنظيمية وإجرائية</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تسويق وتواصل</h3><div class="preview">استراتيجيات عملية وفعّالة</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🍳</div><h3>وصفات وأفكار جديدة</h3><div class="preview">ابتكار أطباق للقائمة</div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🎯</div><h3>تخطيط واستراتيجية</h3><div class="preview">رؤية للنمو والتوسع</div></div>
   </div>
 </section>
 
 <section id="why">
   <h2>ليش أبو سند؟</h2>
+  <p style="color:#8888a0;margin-bottom:24px">أبو سند مو مساعد عام. هذا مستشار ذكي صُمم خصيصاً لعبد الرحمن سندي.</p>
 
-  <h3>الشهادات والمؤهلات</h3>
-  <div class="cred-grid">
-    <div class="cred-item"><div class="cr">PMP®</div><div class="cl">إدارة المشاريع الاحترافية — Project Management Institute</div></div>
-    <div class="cred-item"><div class="cr">القانون الرقمي</div><div class="cl">ماجستير في القانون الرقمي (Digital Law) — Midocean University</div></div>
-    <div class="cred-item"><div class="cr">Nano Degree</div><div class="cl">التحول الرقمي وعلوم البيانات للقادة — Udacity</div></div>
-    <div class="cred-item"><div class="cr">الامتثال</div><div class="cl">ZATCA Phase 2 · PDPL · ISO 27001 — متخصص في الأنظمة التنظيمية</div></div>
-  </div>
+  <ul class="features">
+    <li><span class="check">✓</span><div><strong>دارس ١٢ مرجع متخصص</strong><br><span style="color:#8888a0">Food truck، ريادة الأعمال، الطهي، التسويق — مو مبرمج على معلومات عامة.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتكلم عامية سعودية</strong><br><span style="color:#8888a0">تفاهم مباشر دون تعقيد. صريح — إذا شي غلط بيقولك.</span></div></li>
+    <li><span class="check">✓</span><div><strong>ملم بمنظومة ريادة الأعمال السعودية</strong><br><span style="color:#8888a0">يعرف جهات التمويل، منصة مزايا، الاشتراطات البلدية، هيئة الزكاة.</span></div></li>
+    <li><span class="check">✓</span><div><strong>مبني لك أنت</strong><br><span style="color:#8888a0">كل شي — الشخصية، المعرفة، التوصيات — مصمم خصيصاً لعبد الرحمن. مو قالب.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي — ينضاف. القدرات تكبر مع مشروعك.</span></div></li>
+    <li><span class="check">✓</span><div><strong>بدون رسوم ولا التزامات</strong><br><span style="color:#8888a0">المنصة مفتوحة المصدر. النموذج الذكي مجاني.</span></div></li>
+  </ul>
 
-  <h3>برامج احتضان وتسريع</h3>
-  <div class="logo-row">
-    <div class="logo-badge"><div class="lb-name">The Garage</div><div class="lb-sub">The Garage Plus</div></div>
-    <div class="logo-badge"><div class="lb-name">CODE</div><div class="lb-sub">وزارة الاتصالات وتقنية المعلومات</div></div>
-    <div class="logo-badge"><div class="lb-name">Flat6Labs</div><div class="lb-sub">مدعومة باستثمار</div></div>
-    <div class="logo-badge"><div class="lb-name">LEAP</div><div class="lb-sub">Rocket Fuel Award 2024</div></div>
-    <div class="logo-badge"><div class="lb-name">مسك</div><div class="lb-sub">10X قادة السعودية</div></div>
-    <div class="logo-badge"><div class="lb-name">ZATCA</div><div class="lb-sub">الفائز بهاكاثون ٢٠٢٥</div></div>
-  </div>
-
-  <div class="why-banner">
+  <div class="who-banner">
     <p>
-      <strong>وراء أبو سند رجّال يعتمد عليه.</strong><br>
-      حاصل على PMP® في إدارة المشاريع. ماجستير في القانون الرقمي. خريج برنامج التحول الرقمي من Udacity. متخصص في الامتثال التنظيمي — ZATCA و PDPL و ISO 27001.<br><br>
-      تخرّج من The Garage Plus، CODE (وزارة الاتصالات)، Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.<br><br>
-      <strong>مو شركة تقنية تبيع لك اشتراك وتختفي. رجّال يعرف اسمك، ويعرف شغلك، ووراك.</strong>
+      <strong>مين اللي بنى أبو سند؟</strong><br>
+      مستشار تقني متخصص في الامتثال التنظيمي والتحول الرقمي. حاصل على PMP® وماجستير في القانون الرقمي وNano Degree في التحول الرقمي من Udacity.<br><br>
+      تخرّج من The Garage Plus و CODE (وزارة الاتصالات) و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.<br><br>
+      خلفية تجمع بين القانون والتقنية والتشغيل — عشان ينصحك صح في كل شي من التراخيص لين الزكاة.
     </p>
   </div>
 
-  <ul class="features">
-    <li><span class="check">✓</span><div><strong>مبني لك أنت</strong><br><span style="color:#8888a0">كل شي — من شخصية أبو سند لين الأدوات — مصمم لعبد الرحمن سندي تحديداً. مو قالب جاهز.</span></div></li>
-    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي — ينضاف. القدرات تكبر مع مشروعك.</span></div></li>
-    <li><span class="check">✓</span><div><strong>بدون اشتراكات ولا التزامات</strong><br><span style="color:#8888a0">المنصة مفتوحة المصدر. النموذج الذكي مجاني. ما فيه رسوم خفية ولا عقود.</span></div></li>
-  </ul>
+  <div class="cred-grid">
+    <div class="cred-item"><div class="cr">PMP®</div><div class="cl">إدارة المشاريع الاحترافية</div></div>
+    <div class="cred-item"><div class="cr">القانون الرقمي</div><div class="cl">ماجستير — Midocean University</div></div>
+    <div class="cred-item"><div class="cr">Nano Degree</div><div class="cl">التحول الرقمي — Udacity</div></div>
+    <div class="cred-item"><div class="cr">الامتثال</div><div class="cl">ZATCA · PDPL · ISO 27001</div></div>
+  </div>
+
+  <div class="badge-row">
+    <span><strong>The Garage</strong> Plus</span>
+    <span><strong>CODE</strong> — وزارة الاتصالات</span>
+    <span><strong>Flat6Labs</strong></span>
+    <span><strong>LEAP</strong> Award 2024</span>
+    <span><strong>مسك</strong> 10X Leaders</span>
+    <span><strong>ZATCA</strong> 2025 🏆</span>
+  </div>
 </section>
 
 <section id="ecosystem">
@@ -206,22 +198,21 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <div class="mazaya-grid">
     <div class="mazaya-item"><div class="m-icon">🏦</div><h4>خدمات مصرفية</h4><ul><li>حسابات تجارية دون رسوم</li><li>خصم أجهزة POS</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">💳</div><h4>مدفوعات</h4><ul><li>خصم بوابات الدفع</li><li>رسوم مخفّضة مدى وSTC Pay</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي</h4><ul><li>خطط تأمين للعاملين</li><li>أسعار تنافسية للمجموعات</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي</h4><ul><li>خطط تأمين للعاملين</li><li>أسعار للمجموعات</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🛡️</div><h4>تأمين تجاري</h4><ul><li>تأمين المركبات</li><li>تأمين المسؤولية</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">📡</div><h4>اتصالات وتقنية</h4><ul><li>خصم باقات الإنترنت</li><li>خدمات سحابية</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">📣</div><h4>خدمات تسويقية</h4><ul><li>أرصدة إعلانية مجانية</li><li>تصميم هوية وشعار</li><li>تصوير احترافي</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📡</div><h4>اتصالات</h4><ul><li>خصم باقات الإنترنت</li><li>خدمات سحابية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📣</div><h4>خدمات تسويقية</h4><ul><li>أرصدة إعلانية</li><li>تصميم هوية</li><li>تصوير احترافي</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">⚖️</div><h4>خدمات قانونية</h4><ul><li>استشارات قانونية</li><li>إعداد العقود</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🚚</div><h4>نقل ولوجستيات</h4><ul><li>عروض شحن وتوصيل</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🎓</div><h4>تدريب واستشارات</h4><ul><li>برامج إدارة الأعمال</li><li>جلسات إرشاد</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">🏢</div><h4>مساحات عمل</h4><ul><li>خصم مساحات العمل</li><li>مطابخ تحضير تجارية</li></ul></div>
-    <div class="mazaya-item"><div class="m-icon">📋</div><h4>خدمات حكومية</h4><ul><li>تسهيل السجل التجاري</li><li>تسريع التراخيص البلدية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏢</div><h4>مساحات عمل</h4><ul><li>خصم مساحات العمل</li><li>مطابخ تحضير</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📋</div><h4>خدمات حكومية</h4><ul><li>تسهيل السجل التجاري</li><li>تسريع التراخيص</li></ul></div>
     <div class="mazaya-item"><div class="m-icon">🔐</div><h4>أمن معلومات</h4><ul><li>حماية بيانات العملاء</li><li>التزام PDPL</li></ul></div>
   </div>
 </section>
 
 <section id="tools">
   <h2>🧰 الأدوات</h2>
-
   <div class="tool-cat">
     <h4><span class="ico">💳</span> نقاط البيع — Foodics</h4>
     <table><thead><tr><th>العنصر</th><th>المواصفات</th></tr></thead><tbody>
@@ -231,7 +222,6 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
       <tr><td><strong>CRM</strong></td><td>يتضمن <span class="highlight">إدارة علاقات العملاء</span></td></tr>
     </tbody></table>
   </div>
-
   <div class="tool-cat">
     <h4><span class="ico">📟</span> الأجهزة</h4>
     <table><thead><tr><th>الجهاز</th><th>المزوّد</th><th>الوظيفة</th></tr></thead><tbody>
@@ -239,7 +229,6 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
       <tr><td><strong>جهاز الدفع اللاتلامسي</strong></td><td><span class="highlight">Intersoft</span></td><td><span class="note">Apple Pay</span> والمدفوعات اللاتلامسية</td></tr>
     </tbody></table>
   </div>
-
   <div class="tool-cat">
     <h4><span class="ico">🧾</span> التسويات — Wateer</h4>
     <table><thead><tr><th>العنصر</th><th>المواصفات</th></tr></thead><tbody>
@@ -249,7 +238,6 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
       <tr><td>التكامل</td><td><span class="highlight">ربط مباشر مع Foodics</span></td></tr>
     </tbody></table>
   </div>
-
   <div class="tool-cat">
     <h4><span class="ico">📦</span> الأدوات المساندة</h4>
     <table><thead><tr><th>المجال</th><th>الأداة</th></tr></thead><tbody>
@@ -260,7 +248,6 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
       <tr><td>إدارة</td><td>Notion + Google Calendar</td></tr>
     </tbody></table>
   </div>
-
   <div class="summary-banner"><p><strong>🎯 المنظومة:</strong> Foodics (POS + CRM + زاتكا) ← جهاز Foodics + جهاز Intersoft ← Wateer للتسويات والفواتير ← Canva + Google Sheets</p></div>
 </section>
 
@@ -268,9 +255,9 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <h2>📚 المكتبة — ١٢ مرجع</h2>
   <h3>🚚 عربات الطعام والمطاعم</h3>
   <div class="book-grid">
-    <div class="book-item"><div class="book-num gold">١</div><div class="book-info"><h4>The Food Truck Handbook</h4><div class="author">David Weber</div><div class="desc">المرجع الشامل: اختيار العربة، التسعير، التراخيص.</div></div></div>
-    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div><div class="desc">فن الضيافة وإدارة تجربة العميل.</div></div></div>
-    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div><div class="desc">اقتصاديات الطبق ونقطة التعادل.</div></div></div>
+    <div class="book-item"><div class="book-num gold">١</div><div class="book-info"><h4>The Food Truck Handbook</h4><div class="author">David Weber</div></div></div>
+    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div></div></div>
+    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div></div></div>
   </div>
   <h3>🧠 ريادة الأعمال | 🍳 الطهي | 📱 التسويق | 🇸🇦 السوق</h3>
   <div class="book-grid">
