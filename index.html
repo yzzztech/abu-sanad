@@ -60,7 +60,6 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .book-num.gold { background: linear-gradient(135deg, #ffd700, #c9a000); color: #0a0a1a; }
 .book-info h4 { font-size: 16px; color: #fff; margin-bottom: 4px; }
 .book-info .author { font-size: 12px; color: #8888a0; font-style: italic; margin-bottom: 4px; }
-.book-info .desc { font-size: 13px; color: #a0a0b8; line-height: 1.7; }
 .tool-cat { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
 .tool-cat h4 { color: #00d4ff; font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .tool-cat h4 .ico { font-size: 22px; }
@@ -84,7 +83,7 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .badge-row span strong { color: #e0e0e0; }
 footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
 @media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } .timeline-item { max-width: 100%; } }
+@media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } }
 </style>
 </head>
 <body>
@@ -106,7 +105,7 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="what">
   <h2>وش بيكون أبو سند؟</h2>
   <div class="cards">
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">خبرة معمّقة في قطاع المطاعم والأغذية والمشروبات</div><div class="detail"><p>مُصمم خصيصاً لقطاع عربات الطعام المتنقلة. يستند إلى دراسة ١٢ مرجعاً متخصصاً في إدارة المطاعم وريادة الأعمال وفنون الطهي والتسويق. مزوّد بمعرفة شاملة عن منظومة ريادة الأعمال السعودية: جهات التمويل، المتطلبات التنظيمية، منصة مزايا، والجهات الحكومية الداعمة.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">خبرة معمّقة في قطاع المطاعم والأغذية والمشروبات</div><div class="detail"><p>مُصمم خصيصاً لقطاع عربات الطعام المتنقلة. يستند إلى دراسة ١٢ مرجعاً متخصصاً. مزوّد بمعرفة شاملة عن منظومة ريادة الأعمال السعودية: جهات التمويل، المتطلبات التنظيمية، منصة مزايا، والجهات الحكومية الداعمة.</p></div></div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">مخاطبة مباشرة — دون تعقيد ولا مصطلحات</div><div class="detail"><p>تكتب له بالعامية السعودية ويرد عليك بصبر ووضوح. صريح — إذا شي غلط بيقولك. كأنك تكلّم مستشار مخضرم.</p></div></div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تواصل معه من تيليقرام</h3><div class="preview">في أي وقت، من أي مكان</div><div class="detail"><p>مربوط بتطبيق تيليقرام. تفتح المحادثة وتكتب — يرد عليك فوراً. وأنت في موقع العمل، في السوق، أو في البيت.</p></div></div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🔒</div><h3>بياناتك عندك</h3><div class="preview">الخصوصية وأمن المعلومات أولاً</div><div class="detail"><p>البرنامج (Hermes Agent) يشتغل على جهازك. كل بياناتك محفوظة لديك. النموذج الذكي يحتاج إنترنت (DeepSeek API)، لكن بياناتك لا تُخزَّن ولا تُشارك.</p></div></div>
@@ -140,10 +139,10 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
     <li><span class="check">✓</span><div><strong>بدون رسوم ولا التزامات</strong><br><span style="color:#8888a0">المنصة مفتوحة المصدر. النموذج الذكي مجاني.</span></div></li>
   </ul>
 
+  <h3>ليش أثق فيه؟</h3>
   <div class="who-banner">
     <p>
-      <strong>مين اللي بنى أبو سند؟</strong><br>
-      رائد أعمال، تقلّد دور CTO في عدة شركات وأسس عدة مشاريع. مستشار للعديد من الشركات الناشئة.<br><br>
+      <strong>اللي بنى أبو سند</strong> رائد أعمال، تقلّد دور CTO في عدة شركات وأسس عدة مشاريع. مستشار للعديد من الشركات الناشئة.<br><br>
       حاصل على PMP® وماجستير في القانون الرقمي وNano Degree في التحول الرقمي من Udacity. تخرّج من The Garage Plus و CODE (وزارة الاتصالات) و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.
     </p>
   </div>
