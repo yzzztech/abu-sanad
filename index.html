@@ -31,9 +31,6 @@ section p, section li { color: #b0b0c0; }
 .card .icon { font-size: 48px; margin-bottom: 16px; }
 .card h3 { font-size: 20px; color: #fff; margin: 0 0 8px; }
 .card .preview { color: #8888a0; font-size: 14px; }
-.card .detail { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
-.card .detail.open { max-height: 500px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
-.card .detail p { color: #aaa; font-size: 14px; line-height: 1.9; }
 .features { list-style: none; padding: 0; }
 .features li { background: rgba(18,17,59,0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 20px 24px; margin-bottom: 12px; display: flex; align-items: center; gap: 16px; transition: all 0.3s; }
 .features li:hover { border-color: rgba(0,212,255,0.15); transform: translateX(-4px); }
@@ -110,9 +107,9 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <h2>وش بيكون أبو سند؟</h2>
   <div class="cards">
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">خبرة معمّقة في قطاع المطاعم والأغذية والمشروبات</div><div class="detail"><p>مُصمم خصيصاً لقطاع عربات الطعام المتنقلة. يستند إلى دراسة ١٢ مرجعاً متخصصاً في إدارة المطاعم وريادة الأعمال وفنون الطهي والتسويق. مزوّد بمعرفة شاملة عن منظومة ريادة الأعمال السعودية: جهات التمويل، المتطلبات التنظيمية، منصة مزايا، والجهات الحكومية الداعمة.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">مخاطبة مباشرة — دون تعقيد ولا مصطلحات</div><div class="detail"><p>تكتب له بالعامية السعودية ويرد عليك بصبر ووضوح. صريح — إذا شي غلط بيقولك. لو ما فهمت، يعيد. دايم يشجع ويحمس. كأنك تكلّم مستشار مخضرم.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تواصل معه من تيليقرام</h3><div class="preview">في أي وقت، من أي مكان</div><div class="detail"><p>مربوط بتطبيق تيليقرام. تفتح المحادثة وتكتب — يرد عليك فوراً. وأنت في موقع العمل، في السوق، أو في البيت. ما تحتاج تفتح جهاز ولا تشغّل برامج.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🔒</div><h3>بياناتك عندك</h3><div class="preview">الخصوصية وأمن المعلومات أولاً</div><div class="detail"><p>البرنامج (Hermes Agent) يشتغل على جهازك. كل بياناتك — مبيعات، قوائم، مشتريات — محفوظة لديك. النموذج الذكي يحتاج إنترنت (DeepSeek API)، لكن بياناتك لا تُخزَّن ولا تُشارك مع أي طرف.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">مخاطبة مباشرة — دون تعقيد ولا مصطلحات</div><div class="detail"><p>تكتب له بالعامية السعودية ويرد عليك بصبر ووضوح. صريح — إذا شي غلط بيقولك. كأنك تكلّم مستشار مخضرم.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تواصل معه من تيليقرام</h3><div class="preview">في أي وقت، من أي مكان</div><div class="detail"><p>مربوط بتطبيق تيليقرام. تفتح المحادثة وتكتب — يرد عليك فوراً. وأنت في موقع العمل، في السوق، أو في البيت.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🔒</div><h3>بياناتك عندك</h3><div class="preview">الخصوصية وأمن المعلومات أولاً</div><div class="detail"><p>البرنامج (Hermes Agent) يشتغل على جهازك. كل بياناتك محفوظة لديك. النموذج الذكي يحتاج إنترنت (DeepSeek API)، لكن بياناتك لا تُخزَّن ولا تُشارك.</p></div></div>
   </div>
 </section>
 
@@ -146,9 +143,8 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
   <div class="who-banner">
     <p>
       <strong>مين اللي بنى أبو سند؟</strong><br>
-      مستشار تقني متخصص في الامتثال التنظيمي والتحول الرقمي. حاصل على PMP® وماجستير في القانون الرقمي وNano Degree في التحول الرقمي من Udacity.<br><br>
-      تخرّج من The Garage Plus و CODE (وزارة الاتصالات) و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.<br><br>
-      خلفية تجمع بين القانون والتقنية والتشغيل — عشان ينصحك صح في كل شي من التراخيص لين الزكاة.
+      رائد أعمال، تقلّد دور CTO في عدة شركات وأسس عدة مشاريع. مستشار للعديد من الشركات الناشئة.<br><br>
+      حاصل على PMP® وماجستير في القانون الرقمي وNano Degree في التحول الرقمي من Udacity. تخرّج من The Garage Plus و CODE (وزارة الاتصالات) و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.
     </p>
   </div>
 
