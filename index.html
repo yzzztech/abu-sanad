@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أبو سند — المستشار الذكي لعربة عبد الرحمن سندي</title>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>أبو سند — المستشار الذكي لعربة عبد الرحمن سندي</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #0a0a1a; color: #e0e0e0; font-family: Tahoma, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; overflow-x: hidden; }
@@ -53,8 +50,23 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .timeline-item .step { display: inline-block; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #00d4ff, #006699); color: #fff; font-size: 22px; font-weight: bold; line-height: 48px; margin-bottom: 16px; }
 .timeline-item h4 { margin-bottom: 8px; color: #fff; }
 .timeline-item p { color: #8888a0; font-size: 14px; }
+.book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.book-item { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start; transition: all 0.3s; }
+.book-item:hover { border-color: rgba(0,212,255,0.15); background: rgba(18,17,59,0.5); }
+.book-num { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #00d4ff, #006699); color: #fff; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.book-num.gold { background: linear-gradient(135deg, #ffd700, #c9a000); color: #0a0a1a; }
+.book-info h4 { font-size: 16px; color: #fff; margin-bottom: 4px; }
+.book-info .author { font-size: 12px; color: #8888a0; font-style: italic; margin-bottom: 4px; }
+.tool-cat { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+.tool-cat h4 { color: #00d4ff; font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.tool-cat h4 .ico { font-size: 22px; }
+.mazaya-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0; }
+.ecosystem-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0; }
+.ecosystem-badge { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,136,204,0.08)); border: 1px solid rgba(0,212,255,0.15); border-radius: 12px; padding: 16px 20px; flex: 1; min-width: 200px; }
+.ecosystem-badge .e-label { color: #00d4ff; font-size: 13px; margin-bottom: 6px; }
+.ecosystem-badge .e-name { color: #fff; font-size: 16px; font-weight: bold; }
 .summary-banner { background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,136,204,0.06)); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 28px; margin: 32px 0; }
-.summary-banner p { color: #c0c0d0; font-size: 15px; line-height: 1.9; }
+.summary-banner p { color: #c0c0d0; }
 .summary-banner strong { color: #00d4ff; }
 .who-banner { background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(0,136,204,0.04)); border: 1px solid rgba(0,212,255,0.15); border-radius: 20px; padding: 28px; margin: 32px 0; }
 .who-banner p { color: #c0c0d0; font-size: 15px; line-height: 2; }
@@ -67,7 +79,7 @@ tbody tr:hover td { background: rgba(0,212,255,0.06); }
 .badge-row span { background: rgba(18,17,59,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 8px 14px; font-size: 12px; color: #a0a0b8; }
 .badge-row span strong { color: #e0e0e0; }
 footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
-@media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { nav { gap: 10px; padding: 12px 14px; } nav a { font-size: 12px; padding: 4px 8px; } .hero { padding: 60px 16px 50px; } .hero h1 { font-size: 40px; } .hero p { font-size: 17px; } section { padding: 40px 16px; } section h2 { font-size: 26px; } .cards { grid-template-columns: 1fr; } .book-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr 1fr; } .price-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 400px) { .hero { padding: 40px 12px 30px; } .hero h1 { font-size: 32px; } .hero .truck-icon { font-size: 56px; } .price-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; } .timeline { flex-direction: column; align-items: center; } }
 </style>
 </head>
@@ -81,8 +93,7 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 </nav>
 
 <section class="hero" id="hero">
-  <div class="truck-icon">🚚</div>
-  <h1>أبو سند</h1>
+  <div class="truck-icon">🚚</div><h1>أبو سند</h1>
   <div class="owner">لعبد الرحمن سندي</div>
   <p>مستشار ذكي لعربة طعامك — بسيط، صبور، يتكلم عامية. تواصل معه من تيليقرام، وبياناتك على جهازك.</p>
   <a href="#what" class="cta">كيف يشتغل؟</a>
@@ -91,8 +102,8 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="what">
   <h2>وش بيكون أبو سند؟</h2>
   <div class="cards">
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">خبرة معمّقة في قطاع المطاعم والأغذية والمشروبات</div><div class="detail"><p>مُصمم خصيصاً لقطاع عربات الطعام المتنقلة. يستند إلى دراسة ١٢ مرجعاً متخصصاً. مزوّد بمعرفة شاملة عن منظومة ريادة الأعمال السعودية.</p></div></div>
-    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">مخاطبة مباشرة — دون تعقيد ولا مصطلحات</div><div class="detail"><p>تكتب له بالعامية السعودية ويرد عليك بصبر ووضوح. صريح — إذا شي غلط بيقولك.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🧠</div><h3>ذكي ويعرف شغله</h3><div class="preview">خبرة معمّقة في قطاع المطاعم</div><div class="detail"><p>مُصمم خصيصاً لعربات الطعام. يستند إلى ١٢ مرجعاً متخصصاً. مزوّد بمعرفة شاملة عن منظومة ريادة الأعمال السعودية.</p></div></div>
+    <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">💬</div><h3>يتكلم عامية وصبور</h3><div class="preview">مخاطبة مباشرة دون تعقيد</div><div class="detail"><p>تكتب له بالعامية السعودية ويرد عليك بصبر ووضوح. صريح — إذا شي غلط بيقولك.</p></div></div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">📱</div><h3>تواصل معه من تيليقرام</h3><div class="preview">في أي وقت، من أي مكان</div><div class="detail"><p>مربوط بتطبيق تيليقرام. تفتح المحادثة وتكتب — يرد عليك فوراً.</p></div></div>
     <div class="card" onclick="this.querySelector('.detail').classList.toggle('open')"><div class="icon">🔒</div><h3>بياناتك عندك</h3><div class="preview">الخصوصية وأمن المعلومات أولاً</div><div class="detail"><p>البرنامج يشتغل على جهازك. بياناتك محفوظة لديك. لا تُخزَّن ولا تُشارك.</p></div></div>
   </div>
@@ -115,51 +126,141 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
 <section id="why">
   <h2>ليش أبو سند؟</h2>
   <p style="color:#8888a0;margin-bottom:24px">أبو سند مو مساعد عام. هذا مستشار ذكي صُمم خصيصاً لعبد الرحمن سندي.</p>
-
   <ul class="features">
-    <li><span class="check">✓</span><div><strong>دارس ١٢ مرجع متخصص</strong><br><span style="color:#8888a0">Food truck، ريادة الأعمال، الطهي، التسويق — مو مبرمج على معلومات عامة.</span></div></li>
-    <li><span class="check">✓</span><div><strong>يتكلم عامية سعودية</strong><br><span style="color:#8888a0">تفاهم مباشر دون تعقيد. صريح — إذا شي غلط بيقولك.</span></div></li>
-    <li><span class="check">✓</span><div><strong>ملم بمنظومة ريادة الأعمال السعودية</strong><br><span style="color:#8888a0">يعرف جهات التمويل، منصة مزايا، الاشتراطات البلدية، هيئة الزكاة.</span></div></li>
-    <li><span class="check">✓</span><div><strong>مبني لك أنت</strong><br><span style="color:#8888a0">كل شي — الشخصية، المعرفة، التوصيات — مصمم خصيصاً لعبد الرحمن. مو قالب.</span></div></li>
-    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">كل ما احتجت شي — ينضاف. القدرات تكبر مع مشروعك.</span></div></li>
-    <li><span class="check">✓</span><div><strong>بدون رسوم ولا التزامات</strong><br><span style="color:#8888a0">المنصة مفتوحة المصدر. النموذج الذكي مجاني.</span></div></li>
+    <li><span class="check">✓</span><div><strong>دارس ١٢ مرجع متخصص</strong><br><span style="color:#8888a0">Food truck، ريادة الأعمال، الطهي، التسويق.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتكلم عامية سعودية</strong><br><span style="color:#8888a0">تفاهم مباشر. صريح.</span></div></li>
+    <li><span class="check">✓</span><div><strong>ملم بالمنظومة السعودية</strong><br><span style="color:#8888a0">تمويل، مزايا، بلدية، زكاة.</span></div></li>
+    <li><span class="check">✓</span><div><strong>مبني لك أنت</strong><br><span style="color:#8888a0">مصمم لعبد الرحمن. مو قالب.</span></div></li>
+    <li><span class="check">✓</span><div><strong>يتطور مع شغلك</strong><br><span style="color:#8888a0">القدرات تكبر مع مشروعك.</span></div></li>
+    <li><span class="check">✓</span><div><strong>بدون رسوم ولا التزامات</strong><br><span style="color:#8888a0">مفتوح المصدر. مجاني.</span></div></li>
   </ul>
-
   <h3>ليش أثق فيه؟</h3>
   <div class="who-banner">
-    <p>
-      <strong>اللي بنى أبو سند</strong> رائد أعمال، تقلّد دور CTO في عدة شركات وأسس عدة مشاريع. مستشار للعديد من الشركات الناشئة.<br><br>
-      حاصل على PMP® وماجستير في القانون الرقمي وNano Degree في التحول الرقمي من Udacity. تخرّج من The Garage Plus و CODE (وزارة الاتصالات) و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP Rocket Fuel. خريج 10X قادة السعودية من مسك.
-    </p>
+    <p><strong>اللي بنى أبو سند</strong> رائد أعمال، تقلّد دور CTO في عدة شركات وأسس عدة مشاريع. مستشار للشركات الناشئة.<br><br>
+    حاصل على PMP® وماجستير في القانون الرقمي وNano Degree. تخرّج من The Garage Plus و CODE و Flat6Labs. فائز بهاكاثون ZATCA وجائزة LEAP. خريج 10X قادة السعودية من مسك.</p>
   </div>
-
   <div class="cred-grid">
-    <div class="cred-item"><div class="cr">PMP®</div><div class="cl">إدارة المشاريع الاحترافية</div></div>
-    <div class="cred-item"><div class="cr">القانون الرقمي</div><div class="cl">ماجستير — Midocean University</div></div>
-    <div class="cred-item"><div class="cr">Nano Degree</div><div class="cl">التحول الرقمي — Udacity</div></div>
+    <div class="cred-item"><div class="cr">PMP®</div><div class="cl">إدارة مشاريع احترافية</div></div>
+    <div class="cred-item"><div class="cr">القانون الرقمي</div><div class="cl">ماجستير — Midocean</div></div>
+    <div class="cred-item"><div class="cr">Nano Degree</div><div class="cl">تحول رقمي — Udacity</div></div>
     <div class="cred-item"><div class="cr">الامتثال</div><div class="cl">ZATCA · PDPL · ISO 27001</div></div>
   </div>
-
   <div class="badge-row">
-    <span><strong>The Garage</strong> Plus</span>
-    <span><strong>CODE</strong> — وزارة الاتصالات</span>
-    <span><strong>Flat6Labs</strong></span>
-    <span><strong>LEAP</strong> Award 2024</span>
-    <span><strong>مسك</strong> 10X Leaders</span>
-    <span><strong>ZATCA</strong> 2025 🏆</span>
+    <span><strong>The Garage</strong> Plus</span><span><strong>CODE</strong> — وزارة الاتصالات</span>
+    <span><strong>Flat6Labs</strong></span><span><strong>LEAP</strong> Award 2024</span>
+    <span><strong>مسك</strong> 10X Leaders</span><span><strong>ZATCA</strong> 2025 🏆</span>
   </div>
 </section>
 
-<section id="plan">
-  <h2>خطة التنفيذ</h2>
-  <div class="timeline">
-    <div class="timeline-item"><div class="step">1</div><h4>جلسة تهيئة</h4><p>نثبّت المنصة، نضبط شخصية أبو سند، نربطه بتيليقرام.</p></div>
-    <div class="timeline-item"><div class="step">2</div><h4>فترة اعتياد</h4><p>أسبوع استخدام عملي. نجمع الملاحظات ونقيّم الاحتياجات.</p></div>
-    <div class="timeline-item"><div class="step">3</div><h4>دعم مستمر</h4><p>أي شي جديد تحتاجه — نضيفه. القدرات تتطور مع مشروعك.</p></div>
+<section id="ecosystem">
+  <h2>🌐 منظومة ريادة الأعمال السعودية</h2>
+  <p style="color:#8888a0;margin-bottom:32px">خمسة مستويات من الدعم المؤسسي.</p>
+  <div class="ecosystem-row">
+    <div class="ecosystem-badge"><div class="e-label">💰 جهات تمويلية</div><div class="e-name">نايلة، ريادة، كفالة، واعد، بنك التنمية</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🏛️ جهات تمكينية</div><div class="e-name">منشآت، جمعية ريادة الأعمال، مسك، الكراج</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🎫 مزايا وخصومات</div><div class="e-name">منصة مزايا (تابعة لمنشآت)</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🏫 حاضنات أعمال</div><div class="e-name">فيودكس، الهيدب، نكون، تسامي</div></div>
+    <div class="ecosystem-badge"><div class="e-label">🎓 تطوير وتدريب</div><div class="e-name">دورات منشآت، مسك، كاوست</div></div>
   </div>
-  <p style="text-align:center;margin-top:24px">
-    <a href="tadreeb.html" style="color:#00d4ff;text-decoration:none;border:1px solid rgba(0,212,255,0.2);padding:12px 28px;border-radius:10px;font-size:15px;transition:all 0.3s" onmouseover="this.style.background='rgba(0,212,255,0.08)'" onmouseout="this.style.background='transparent'">📋 استعرض الخطة التدريبية الكاملة</a>
-  </p>
+  <h3>💰 جهات التمويل</h3>
+  <table>
+    <thead><tr><th>الجهة</th><th>النوع</th><th>ملخص العرض</th></tr></thead>
+    <tbody>
+      <tr><td><strong>نايلة للتمويل</strong></td><td>تمويل أصغر</td><td>≤ ٣ مليون ريال. ⭐ <span class="highlight">الأنسب لعربة طعام</span></td></tr>
+      <tr><td><strong>ريادة</strong></td><td>تمويل + تدريب</td><td>حتى ٣٠٠ ألف ريال</td></tr>
+      <tr><td><strong>كفالة</strong></td><td>ضمانات</td><td>ضمان القرض لدى البنوك</td></tr>
+      <tr><td><strong>واعد (أرامكو)</strong></td><td>تمويل مباشر</td><td>شروط عادلة</td></tr>
+      <tr><td><strong>بنك التنمية الاجتماعية</strong></td><td>تمويل حكومي</td><td>المظلة الرئيسة</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="mazaya">
+  <h2>🎫 منصة "مزايا" — تحت منشآت</h2>
+  <p style="color:#8888a0;margin-bottom:20px"><strong>خصومات ومزايا حصرية</strong> للمنشآت الصغيرة والمتوسطة.</p>
+  <div class="mazaya-grid">
+    <div class="mazaya-item"><div class="m-icon">🏦</div><h4>خدمات مصرفية</h4><ul><li>حسابات دون رسوم</li><li>خصم أجهزة POS</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">💳</div><h4>مدفوعات</h4><ul><li>خصم بوابات الدفع</li><li>رسوم مخفّضة</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏥</div><h4>تأمين صحي</h4><ul><li>خطط للعاملين</li><li>أسعار المجموعات</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🛡️</div><h4>تأمين تجاري</h4><ul><li>تأمين المركبات</li><li>تأمين المسؤولية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📡</div><h4>اتصالات</h4><ul><li>خصم الإنترنت</li><li>خدمات سحابية</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📣</div><h4>تسويق</h4><ul><li>أرصدة إعلانية</li><li>تصميم هوية</li><li>تصوير</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">⚖️</div><h4>قانوني</h4><ul><li>استشارات</li><li>إعداد العقود</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🚚</div><h4>لوجستيات</h4><ul><li>عروض شحن</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🎓</div><h4>تدريب</h4><ul><li>برامج أعمال</li><li>جلسات إرشاد</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🏢</div><h4>مساحات عمل</h4><ul><li>خصم مكاتب</li><li>مطابخ تحضير</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">📋</div><h4>حكومي</h4><ul><li>تسهيل السجل</li><li>تسريع التراخيص</li></ul></div>
+    <div class="mazaya-item"><div class="m-icon">🔐</div><h4>أمن معلومات</h4><ul><li>حماية البيانات</li><li>التزام PDPL</li></ul></div>
+  </div>
+</section>
+
+<section id="tools">
+  <h2>🧰 الأدوات</h2>
+  <div class="tool-cat">
+    <h4><span class="ico">💳</span> نقاط البيع — Foodics</h4>
+    <table><thead><tr><th>العنصر</th><th>المواصفات</th></tr></thead><tbody>
+      <tr><td>النظام</td><td><strong><a href="https://www.foodics.com/" target="_blank" style="color:#00d4ff">Foodics</a></strong> — منصة إدارة مطاعم سحابية</td></tr>
+      <tr><td>الامتثال</td><td><span class="highlight">الفوترة الإلكترونية (ZATCA Phase 2)</span></td></tr>
+      <tr><td>المدفوعات</td><td>مدى، STC Pay، Apple Pay</td></tr>
+      <tr><td><strong>CRM</strong></td><td><span class="highlight">إدارة علاقات العملاء</span></td></tr>
+    </tbody></table>
+  </div>
+  <div class="tool-cat">
+    <h4><span class="ico">📟</span> الأجهزة</h4>
+    <table><thead><tr><th>الجهاز</th><th>المزوّد</th><th>الوظيفة</th></tr></thead><tbody>
+      <tr><td><strong>جهاز نقطة البيع</strong></td><td>Foodics</td><td>الطلبات والفواتير</td></tr>
+      <tr><td><strong>جهاز الدفع اللاتلامسي</strong></td><td><span class="highlight">Intersoft</span></td><td><span class="note">Apple Pay</span> والمدفوعات اللاتلامسية</td></tr>
+    </tbody></table>
+  </div>
+  <div class="tool-cat">
+    <h4><span class="ico">🧾</span> التسويات — Wateer</h4>
+    <table><thead><tr><th>العنصر</th><th>المواصفات</th></tr></thead><tbody>
+      <tr><td>النظام</td><td><strong><a href="https://wateer.sa/" target="_blank" style="color:#00d4ff">Wateer</a></strong> — منصة تسويات مالية</td></tr>
+      <tr><td>المطابقة</td><td><span class="highlight">مطابقة الإيصالات مع كشوف البنك آلياً</span></td></tr>
+      <tr><td>الفوترة</td><td><span class="note">فواتير رقمية بهويتك</span></td></tr>
+      <tr><td>التكامل</td><td><span class="highlight">ربط مباشر مع Foodics</span></td></tr>
+    </tbody></table>
+  </div>
+  <div class="tool-cat">
+    <h4><span class="ico">📦</span> الأدوات المساندة</h4>
+    <table><thead><tr><th>المجال</th><th>الأداة</th></tr></thead><tbody>
+      <tr><td>مخزون</td><td>Foodics Inventory (مدمج)</td></tr>
+      <tr><td>تسويق</td><td>Canva + Meta Business Suite</td></tr>
+      <tr><td>توصيل</td><td>Jahez أو HungerStation</td></tr>
+      <tr><td>تحليل</td><td>Foodics Dashboard + Google Sheets</td></tr>
+      <tr><td>إدارة</td><td>Notion + Google Calendar</td></tr>
+    </tbody></table>
+  </div>
+  <div class="summary-banner"><p><strong>🎯 المنظومة:</strong> Foodics (POS + CRM + زاتكا) ← جهاز Foodics + جهاز Intersoft ← Wateer للتسويات والفواتير ← Canva + Google Sheets</p></div>
+</section>
+
+<section id="books">
+  <h2>📚 المكتبة — ١٢ مرجع</h2>
+  <h3>🚚 عربات الطعام</h3>
+  <div class="book-grid">
+    <div class="book-item"><div class="book-num gold">١</div><div class="book-info"><h4>The Food Truck Handbook</h4><div class="author">David Weber</div></div></div>
+    <div class="book-item"><div class="book-num gold">٢</div><div class="book-info"><h4>Setting the Table</h4><div class="author">Danny Meyer</div></div></div>
+    <div class="book-item"><div class="book-num gold">٣</div><div class="book-info"><h4>Restaurant Success by the Numbers</h4><div class="author">Roger Fields</div></div></div>
+  </div>
+  <h3>🧠 ريادة | 🍳 طهي | 📱 تسويق | 🇸🇦 سوق</h3>
+  <div class="book-grid">
+    <div class="book-item"><div class="book-num">٤</div><div class="book-info"><h4>The E-Myth Revisited</h4><div class="author">Michael Gerber</div></div></div>
+    <div class="book-item"><div class="book-num">٥</div><div class="book-info"><h4>The Lean Startup</h4><div class="author">Eric Ries</div></div></div>
+    <div class="book-item"><div class="book-num">٦</div><div class="book-info"><h4>$100 Startup</h4><div class="author">Chris Guillebeau</div></div></div>
+    <div class="book-item"><div class="book-num">٧</div><div class="book-info"><h4>The Flavor Bible</h4><div class="author">Page & Dornenburg</div></div></div>
+    <div class="book-item"><div class="book-num">٨</div><div class="book-info"><h4>Salt, Fat, Acid, Heat</h4><div class="author">Samin Nosrat</div></div></div>
+    <div class="book-item"><div class="book-num">٩</div><div class="book-info"><h4>Saudi Feast</h4><div class="author">طهّاة سعوديون</div></div></div>
+    <div class="book-item"><div class="book-num">١٠</div><div class="book-info"><h4>Jab, Jab, Jab, Right Hook</h4><div class="author">Gary Vaynerchuk</div></div></div>
+    <div class="book-item"><div class="book-num">١١</div><div class="book-info"><h4>Contagious</h4><div class="author">Jonah Berger</div></div></div>
+    <div class="book-item"><div class="book-num">١٢</div><div class="book-info"><h4>سيرة رائد أعمال سعودي</h4><div class="author">السوق المحلي</div></div></div>
+  </div>
+</section>
+
+<section id="regulations">
+  <h2>📜 الأنظمة واللوائح</h2>
+  <div class="tool-cat"><h4><span class="ico">🏛️</span> التراخيص</h4><table><thead><tr><th>المتطلب</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>سجل تجاري</strong></td><td>وزارة التجارة</td></tr><tr><td><strong>رخصة بلدية</strong></td><td>أمانة المنطقة — بلدي</td></tr><tr><td><strong>شهادة صحية</strong></td><td>البلدية</td></tr></tbody></table></div>
+  <div class="tool-cat"><h4><span class="ico">💰</span> مالية وضريبية</h4><table><thead><tr><th>النظام</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>الضريبة</strong></td><td>ZATCA — عند ٣٧٥ ألف</td></tr><tr><td><strong>الفوترة</strong></td><td>ZATCA Phase 2 — <span class="highlight">Foodics + Wateer ✅</span></td></tr></tbody></table></div>
+  <div class="tool-cat"><h4><span class="ico">👷</span> العمل</h4><table><thead><tr><th>النظام</th><th>الجهة</th></tr></thead><tbody><tr><td><strong>نظام العمل</strong></td><td>الموارد البشرية</td></tr><tr><td><strong>التأمينات</strong></td><td>GOSI</td></tr></tbody></table></div>
 </section>
 
 <section id="cost">
@@ -171,6 +272,18 @@ footer { text-align: center; padding: 40px 24px; color: #555; font-size: 13px; b
     <div class="price-card zero"><div class="amount">$0</div><div class="label">الإجمالي الشهري<br>ولا ريال</div></div>
   </div>
   <p style="text-align:center;color:#8888a0;margin-top:32px">منصة مفتوحة المصدر. بدون اشتراكات. بدون رسوم خفية. بدون التزامات.</p>
+</section>
+
+<section id="plan">
+  <h2>خطة التنفيذ</h2>
+  <div class="timeline">
+    <div class="timeline-item"><div class="step">1</div><h4>جلسة تهيئة</h4><p>نثبّت المنصة، نضبط شخصية أبو سند، نربطه بتيليقرام.</p></div>
+    <div class="timeline-item"><div class="step">2</div><h4>فترة اعتياد</h4><p>أسبوع استخدام عملي. نجمع الملاحظات.</p></div>
+    <div class="timeline-item"><div class="step">3</div><h4>دعم مستمر</h4><p>أي شي جديد — نضيفه. القدرات تتطور.</p></div>
+  </div>
+  <p style="text-align:center;margin-top:24px">
+    <a href="tadreeb.html" style="color:#00d4ff;text-decoration:none;border:1px solid rgba(0,212,255,0.2);padding:12px 28px;border-radius:10px;font-size:15px;transition:all 0.3s" onmouseover="this.style.background='rgba(0,212,255,0.08)'" onmouseout="this.style.background='transparent'">📋 الخطة التدريبية الكاملة</a>
+  </p>
 </section>
 
 <section style="text-align:center;padding-bottom:100px">
